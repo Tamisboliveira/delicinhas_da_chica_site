@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Delicinhas da Chica</title>
+
+        <!--importa o css-->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <!--body-->
+    <body class="body">
+        <!--Cabeçalho-->
+        <header class="header">
+            <nav class="navbar">
+                <h1 class="logo"><img src="assets/images/Logo_Delicinhas_Color.png" alt="Logo do site" ></h1>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <button id="menu-toggle" class ="menu-btn">☰</button>
+            </nav>
+        </header>
+        <!--Seção inicial-->
+        <main>
+            <!--hero | Inicio-->
+            <section id="inicio" class="hero">
+                <div class="hero-content">
+                    <h2>Delicinhas da Chica</h2>
+                    <p>Trufas e brigadeiros artesanais que derretem na boca e aquecem o coração</p>
+                    <div class="buttons">
+                        <a href="#cardapio" class="btn">🍫 Ver nossos doces </a>
+                        <a href="#sobre" class="btn">💕 Conheça a Chica</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--about-->
+            <section id="sobre" class="sobre">
+                <h2>Sobre a Chica</h2>
+                <p>Fazer um breve resumo....</p>
+            </section>
+
+            <!--menu-->
+            <section id="cardapio" class="cardapio">
+                <h2>🍫 Nossos produtos</h2>
+                <p class="description-cardapio">Descubra nossa seleção especial de trufas e brigadeiros artesanais, preparados com chocolate premium e ingredientes selecionados</p>
+
+                <!-- Botões de filtro -->
+                <div class="filter-buttons">
+                    <button class="btn-filter" onclick="filterMenu('todos')">Todos</button>
+                    <button class="btn-filter" onclick="filterMenu('trufas')">🍫 Trufas</button>
+                    <button class="btn-filter" onclick="filterMenu('brigadeiros')">🧁 Brigadeiros</button>
+                    <button class="btn-filter" onclick="filterMenu('especiais')">✨ Especiais</button>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-top">
+                            <span class="tag">Frutada</span>
+                            <img src="assets/images/trufa-morango.png" alt="Trufa de Morango" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Trufas de Morango</h4>
+                            <p class="card-description">
+                                Trufas rosadas com recheio de morango natural e chocolate branco.
+                            </p>
+                            <div class="card-footer">
+                                <span class="card-price">R$ 4,00</span>
+                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <span class="tag">Frutada</span>
+                            <img src="assets/images/trufa-morango.png" alt="Trufa de Morango" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Trufas de Morango</h4>
+                            <p class="card-description">
+                                Trufas rosadas com recheio de morango natural e chocolate branco.
+                            </p>
+                            <div class="card-footer">
+                                <span class="card-price">R$ 4,00</span>
+                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <span class="tag">Frutada</span>
+                            <img src="assets/images/trufa-morango.png" alt="Trufa de Morango" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Trufas de Morango</h4>
+                            <p class="card-description">
+                                Trufas rosadas com recheio de morango natural e chocolate branco.
+                            </p>
+                            <div class="card-footer">
+                                <span class="card-price">R$ 4,00</span>
+                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <span class="tag">Frutada</span>
+                            <img src="assets/images/trufa-morango.png" alt="Trufa de Morango" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Trufas de Morango</h4>
+                            <p class="card-description">
+                                Trufas rosadas com recheio de morango natural e chocolate branco.
+                            </p>
+                            <div class="card-footer">
+                                <span class="card-price">R$ 4,00</span>
+                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--contact-->
+            <section id="contato" class="contato">
+                <h2>📞 Entre em contato</h2>
+                <p>Faça seu pedido e experimente nossas deliciosas trufas e brigadeiros artesanais!
+                </p>
+                <Div class="btn-whatsapp">
+                    <a href="https://wa.me/5519971695600?text=Oi,%20estou%20entrando%20em%20contato%20através%20do%20site,%20gostaria%20de%20mais%20informações." 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    💬 Fale conosco pelo WhatsApp
+                    </a>
+                </Div>
+            </section>
+        </main> 
+    </body>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="assets/images/Logo_Delicinhas_White.png" alt="Logo do site" class="footer-logo">
+            <p class="footer-text">Adoçando vidas desde 2022. Feito com amor, carinho e os melhores ingredientes.</p>
+        </div>
+        <p>&copy; 2025 Delicinhas da Chica. Todos os direitos reservados.</p>
+        <p>Site desenvolvolvido por Astrya Tech ✨</p>
+    </footer>
+
+    <!--importa o js-->
+    <script src="script.js"></script>
+</html>

@@ -1,2 +1,3 @@
-# deliciosas_da_chica_site
-Landing page para divulgação Delicinhas da Chica
+# Delicinhas da Chica
+
+Desenvolvimento da landing page para a matéria Projeto de Interface - IESB e divulgação da Delicinhas da Chica.
