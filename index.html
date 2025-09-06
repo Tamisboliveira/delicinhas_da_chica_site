@@ -7,6 +7,14 @@
 
         <!--importa o css-->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/contact.css">
+
+        <!-- Font Awesome para os ícones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 
     </head>
     <!--body-->
@@ -40,11 +48,22 @@
 
             <!--about-->
             <section id="sobre" class="sobre">
-                <h2>Sobre a Chica</h2>
-                <p>Fazer um breve resumo....</p>
+                <div class="chica-container">
+                    <div class="chica-img">
+                        <img src="assets/images/Chica.png" alt="Foto da Chica" >
+                    </div>
+                    <div class="chica-text">
+                        <h2>Sobre a Chica</h2>
+                        <p>
+                            A Chica é apaixonada por transformar momentos simples em memórias doces.  
+                            Especialista em trufas e brigadeiros artesanais, ela acredita que cada receita carrega  
+                            um pedacinho de amor e cuidado. Tudo é feito com ingredientes selecionados e muito carinho!
+                        </p>
+                    </div>
+                </div>
             </section>
 
-            <!--menu-->
+            <!--menu / cardapio-->
             <section id="cardapio" class="cardapio">
                 <h2>🍫 Nossos produtos</h2>
                 <p class="description-cardapio">Descubra nossa seleção especial de trufas e brigadeiros artesanais, preparados com chocolate premium e ingredientes selecionados</p>
@@ -70,7 +89,7 @@
                             </p>
                             <div class="card-footer">
                                 <span class="card-price">R$ 4,00</span>
-                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Pedir Agora</a>
+                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -86,7 +105,7 @@
                             </p>
                             <div class="card-footer">
                                 <span class="card-price">R$ 4,00</span>
-                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Pedir Agora</a>
+                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +121,7 @@
                             </p>
                             <div class="card-footer">
                                 <span class="card-price">R$ 4,00</span>
-                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Pedir Agora</a>
+                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -118,7 +137,7 @@
                             </p>
                             <div class="card-footer">
                                 <span class="card-price">R$ 4,00</span>
-                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Pedir Agora</a>
+                                <a href="https://wa.me/5519971695600?text=Quero%20pedir%20a%20Trufa%20de%20Morango!" class="btn-card">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -127,16 +146,36 @@
 
             <!--contact-->
             <section id="contato" class="contato">
-                <h2>📞 Entre em contato</h2>
+                <h2>Entre em contato</h2>
                 <p>Faça seu pedido e experimente nossas deliciosas trufas e brigadeiros artesanais!
                 </p>
-                <Div class="btn-whatsapp">
-                    <a href="https://wa.me/5519971695600?text=Oi,%20estou%20entrando%20em%20contato%20através%20do%20site,%20gostaria%20de%20mais%20informações." 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    💬 Fale conosco pelo WhatsApp
-                    </a>
-                </Div>
+                <div class="container-contato"> 
+                    <div class="cards-contato">
+                        <div class="card-endereco">
+                            <h3>📍 Nosso endereço</h3>
+                            <p>Jardim Igaçaba, Mogi Guaçu - SP</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/delicinhasda.chica?igsh=bDNid25kNTB5Mm5o" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                                @delicinhasda.chica
+                            </a>
+                            <a href="https://wa.me/5519971695600?text=Oi,%20estou%20entrando%20em%20contato%20através%20do%20site,%20gostaria%20de%20mais%20informações." 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            WhatsApp
+                            </a>
+                    </div>
+                    <div class="Form-contato">
+                        <form id="form-contato">
+                            <input type="text" placeholder="Seu nome" required>
+                            <input type="email" placeholder="Seu e-mail" required>
+                            <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+                            <button type="submit" class="btn">Enviar</button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </main> 
     </body>

@@ -1,0 +1,71 @@
+@import url('style.css');
+
+/*contato*/
+.contato {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contato p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--cor-secundaria);
+}
+
+.container-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.cards-contato {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-links a {
+  color: #555; /* Cor padrão */
+  font-size: 28px; /* Tamanho do ícone */
+  transition: color 0.3s ease;
+}
+
+.social-links a.instagram:hover {
+  color: #E4405F; /* Cor do Instagram */
+}
+
+.social-links a.whatsapp:hover {
+  color: #25D366; /* Cor do WhatsApp */
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+form button {
+    width: fit-content;
+    align-self: center;
+}

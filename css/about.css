@@ -1,0 +1,71 @@
+@import url('style.css');
+
+/* Container */
+.chica-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Foto */
+.chica-img {
+    flex: 1 1 350px;
+    display: flex;
+    text-align: center;
+}
+
+.chica-img img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.chica-img img:hover {
+    transform: scale(1.05);
+}
+
+/* Texto */
+.chica-text {
+    flex: 1 1 500px;
+}
+
+.chica-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.chica-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .chica-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .chica-img {
+        max-width: 260px;
+    }
+
+    .chica-text h2 {
+        font-size: 2rem;
+    }
+
+    .chica-text p {
+        font-size: 1rem;
+    }
+
+}
