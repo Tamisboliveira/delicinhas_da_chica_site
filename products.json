@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "name": "Brigadeiro",
+        "price": 7.00,
+        "type": "Trufa chocolate meio amargo",
+        "description": "Trufa com recheio brigadeiro gourmet feito com chocolate meio amargo envolvido com casquinha de chocolate meio amargo.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 2,
+        "name": "Beijinho",
+        "price": 7.00,
+        "type": "Trufa chocolate meio amargo",
+        "description": "Trufa com recheio de beijinho envolvido com casquinha de chocolate meio amargo.",
+        "image":"assets/images/products/Coco.png",
+        "in_stock": true
+    },
+    {
+        "id": 3,
+        "name": "Ninho com Nutella",
+        "price": 7.00,
+        "type": "Trufa chocolate meio amargo",
+        "description": "Trufa com recheio de brigadeiro de ninho com nutella envolvido com casquinha de chocolate meio amargo.",
+        "image":"assets/images/products/NinhoNutella.png",
+        "in_stock": true
+    },
+    {
+        "id": 4,
+        "name": "Ninho com Nutella",
+        "price": 7.00,
+        "type": "Trufa chocolate branco",
+        "description": "Trufa com recheio de brigadeiro de ninho com nutella envolvido com casquinha de chocolate branco.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 5,
+        "name": "Biscoito Oreo",
+        "price": 7.00,
+        "type": "Trufa chocolate branco",
+        "description": "Trufa com recheio de brigadeiro de chocolate branco com biscoito oreo na casquinha de chocolate branco.",
+        "image":"assets/images/products/Oreo.png",
+        "in_stock": true
+    },
+    {
+        "id": 6,
+        "name": "Churros",
+        "price": 7.00,
+        "type": "Trufa chocolate meio amargo",
+        "description": "Trufa com recheio de brigadeiro de churros com canela na casquinha de chocolate meio amargo.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 7,
+        "name": "Café",
+        "price": 7.00,
+        "type": "Trufa chocolate meio amargo",
+        "description": "Trufa com brigadeiro de café na casquinha de chocolate meio amargo.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 8,
+        "name": "Café",
+        "price": 7.00,
+        "type": "Trufa chocolate branco",
+        "description": "Trufa com brigadeiro de café na casquinha de chocolate branco.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 9,
+        "name": "Maracujá",
+        "price": 7.00,
+        "type": "Trufa chocolate meio amargo",
+        "description": "Trufa com recheio de brigadeiro com maracujá na casquinha de chocolate meio amargo.",
+        "image":"assets/images/products/Maracuja.png",
+        "in_stock": true
+    },
+    {
+        "id": 10,
+        "name": "Morango",
+        "price": 7.00,
+        "type": "Trufa chocolate branco",
+        "description": "Trufa com recheio de brigadeiro com maracujá na casquinha de chocolate branco.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 11,
+        "name": "Morango",
+        "price": 7.00,
+        "type": "Trufa chocolate meio amargo",
+        "description": "Trufa com recheio de brigadeiro de morango na casquinha de chocolate meio amargo.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 12,
+        "name": "Limão",
+        "price": 7.00,
+        "type": "Trufa chocolate meio amargo",
+        "description": "Trufa com recheio de brigadeiro de limão na casquinha de chocolate meio amargo.",
+        "image":"assets/images/products/Limao.png",
+        "in_stock": true
+    },
+    {
+        "id": 13,
+        "name": "Caixa com 02 (duas) trufas",
+        "price": 22.00,
+        "type": "Especial",
+        "description": "Delicioso brigadeiro gourmet feito com chocolate meio amargo de alta qualidade, proporcionando um sabor intenso e cremoso. Perfeito para quem aprecia um toque sofisticado no clássico doce brasileiro.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 14,
+        "name": "Caixa com 04 (quatro) trufas",
+        "price": 36.00,
+        "type": "Especial",
+        "description": "Delicioso brigadeiro gourmet feito com chocolate meio amargo de alta qualidade, proporcionando um sabor intenso e cremoso. Perfeito para quem aprecia um toque sofisticado no clássico doce brasileiro.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 15,
+        "name": "Caixa com 06 (seis) trufas",
+        "price": 51.00,
+        "type": "Especial",
+        "description": "Delicioso brigadeiro gourmet feito com chocolate meio amargo de alta qualidade, proporcionando um sabor intenso e cremoso. Perfeito para quem aprecia um toque sofisticado no clássico doce brasileiro.",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 16,
+        "name": "Docinhos - 25 unidades",
+        "price": 68.00,
+        "type": "Brigadeiro",
+        "description": "Escolha um sabor: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 17,
+        "name": "Docinhos - 50 unidades",
+        "price": 135.00,
+        "type": "Brigadeiro",
+        "description": "Escolha até 02 sabores: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
+        "image":"",
+        "in_stock": true
+    },
+    {
+        "id": 18,
+        "name": "Docinhos - 100 unidades",
+        "price": 250.00,
+        "type": "Brigadeiro",
+        "description": "Escolha até 04 sabores: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
+        "image":"",
+        "in_stock": true
+    }
+]
