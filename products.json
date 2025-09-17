@@ -1,110 +1,110 @@
 [
     {
         "id": 1,
-        "name": "Brigadeiro",
+        "name": "Brigadeiro com chocolate meio amargo",
         "price": 7.00,
-        "type": "Trufa chocolate meio amargo",
+        "type": "Trufa",
         "description": "Trufa com recheio brigadeiro gourmet feito com chocolate meio amargo envolvido com casquinha de chocolate meio amargo.",
-        "image":"",
+        "image":"assets/images/products/01_Brigadeiro.png",
         "in_stock": true
     },
     {
         "id": 2,
-        "name": "Beijinho",
+        "name": "Beijinho com chocolate meio amargo",
         "price": 7.00,
-        "type": "Trufa chocolate meio amargo",
+        "type": "Trufa",
         "description": "Trufa com recheio de beijinho envolvido com casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/Coco.png",
+        "image":"assets/images/products/02_Coco.png",
         "in_stock": true
     },
     {
         "id": 3,
-        "name": "Ninho com Nutella",
+        "name": "Ninho com Nutella com chocolate meio amargo",
         "price": 7.00,
-        "type": "Trufa chocolate meio amargo",
+        "type": "Trufa",
         "description": "Trufa com recheio de brigadeiro de ninho com nutella envolvido com casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/NinhoNutella.png",
+        "image":"assets/images/products/03_NinhoNutella.png",
         "in_stock": true
     },
     {
         "id": 4,
-        "name": "Ninho com Nutella",
+        "name": "Ninho com Nutella com chocolate branco",
         "price": 7.00,
-        "type": "Trufa chocolate branco",
+        "type": "Trufa",
         "description": "Trufa com recheio de brigadeiro de ninho com nutella envolvido com casquinha de chocolate branco.",
-        "image":"",
+        "image":"assets/images/products/04_Ninho_Nutella_Branco.png",
         "in_stock": true
     },
     {
         "id": 5,
-        "name": "Biscoito Oreo",
+        "name": "Biscoito Oreo com chocolate branco",
         "price": 7.00,
-        "type": "Trufa chocolate branco",
+        "type": "Trufa",
         "description": "Trufa com recheio de brigadeiro de chocolate branco com biscoito oreo na casquinha de chocolate branco.",
-        "image":"assets/images/products/Oreo.png",
+        "image":"assets/images/products/05_Oreo.png",
         "in_stock": true
     },
     {
         "id": 6,
-        "name": "Churros",
+        "name": "Churros com chocolate meio amargo",
         "price": 7.00,
-        "type": "Trufa chocolate meio amargo",
+        "type": "Trufa",
         "description": "Trufa com recheio de brigadeiro de churros com canela na casquinha de chocolate meio amargo.",
-        "image":"",
+        "image":"assets/images/products/06_Churros.png",
         "in_stock": true
     },
     {
         "id": 7,
-        "name": "Café",
+        "name": "Paçoca com chocolate meio amargo",
         "price": 7.00,
-        "type": "Trufa chocolate meio amargo",
-        "description": "Trufa com brigadeiro de café na casquinha de chocolate meio amargo.",
-        "image":"",
+        "type": "Trufa",
+        "description": "Trufa com brigadeiro de paçoca na casquinha de chocolate meio amargo.",
+        "image":"assets/images/products/07_Pacoca.png",
         "in_stock": true
     },
     {
         "id": 8,
-        "name": "Café",
+        "name": "Café com chocolate branco",
         "price": 7.00,
-        "type": "Trufa chocolate branco",
+        "type": "Trufa",
         "description": "Trufa com brigadeiro de café na casquinha de chocolate branco.",
-        "image":"",
+        "image":"assets/images/products/08_Cafe_Branco.png",
         "in_stock": true
     },
     {
         "id": 9,
-        "name": "Maracujá",
+        "name": "Maracujá com chocolate meio amargo",
         "price": 7.00,
-        "type": "Trufa chocolate meio amargo",
+        "type": "Trufa",
         "description": "Trufa com recheio de brigadeiro com maracujá na casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/Maracuja.png",
+        "image":"assets/images/products/09_Maracuja.png",
         "in_stock": true
     },
     {
         "id": 10,
-        "name": "Morango",
+        "name": "Morango com chocolate branco",
         "price": 7.00,
-        "type": "Trufa chocolate branco",
+        "type": "Trufa",
         "description": "Trufa com recheio de brigadeiro com maracujá na casquinha de chocolate branco.",
         "image":"",
         "in_stock": true
     },
     {
         "id": 11,
-        "name": "Morango",
+        "name": "Morango com chocolate meio amargo",
         "price": 7.00,
-        "type": "Trufa chocolate meio amargo",
+        "type": "Trufa",
         "description": "Trufa com recheio de brigadeiro de morango na casquinha de chocolate meio amargo.",
         "image":"",
         "in_stock": true
     },
     {
         "id": 12,
-        "name": "Limão",
+        "name": "Limão com chocolate meio amargo",
         "price": 7.00,
-        "type": "Trufa chocolate meio amargo",
+        "type": "Trufa",
         "description": "Trufa com recheio de brigadeiro de limão na casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/Limao.png",
+        "image":"assets/images/products/12_Limao.png",
         "in_stock": true
     },
     {
@@ -136,29 +136,29 @@
     },
     {
         "id": 16,
-        "name": "Docinhos - 25 unidades",
+        "name": "Brigadeiro Gourmet - 25 unidades",
         "price": 68.00,
         "type": "Brigadeiro",
         "description": "Escolha um sabor: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
-        "image":"",
+        "image":"assets/images/products/16_Brigadeiro_25.png",
         "in_stock": true
     },
     {
         "id": 17,
-        "name": "Docinhos - 50 unidades",
+        "name": "Brigadeiro Gourmet - 50 unidades",
         "price": 135.00,
         "type": "Brigadeiro",
         "description": "Escolha até 02 sabores: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
-        "image":"",
+        "image":"assets/images/products/17_Brigadeiro_50.png",
         "in_stock": true
     },
     {
         "id": 18,
-        "name": "Docinhos - 100 unidades",
+        "name": "Brigadeiro Gourmet - 100 unidades",
         "price": 250.00,
         "type": "Brigadeiro",
         "description": "Escolha até 04 sabores: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
-        "image":"",
+        "image":"assets/images/products/18_Brigadeiro_100.png",
         "in_stock": true
     }
 ]

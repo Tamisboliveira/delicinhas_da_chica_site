@@ -1,6 +1,8 @@
-@import url('style.css');
+@import url('style.css'); /* Mantém a importação das regras globais */
 
-/* cardápio */
+/*==========================================================
+    1. SEÇÃO PRINCIPAL (CARDÁPIO)
+==========================================================*/
 .cardapio {
     background: white;
 }
@@ -12,37 +14,78 @@
     text-align: center;
 }
 
+/*==========================================================
+    2. FILTROS E BOTÕES
+==========================================================*/
 .filter-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .btn-filter {
     background-color: var(--cor-fundo);
     color: var(--cor-primaria);
-    border: none;
+    border: 2px solid var(--cor-fundo);
     padding: 10px 20px;
     border-radius: 30px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.btn-filter:hover,
-.btn-filter:active {
+.btn-filter:hover {
     background-color: var(--cor-primaria);
     color: white;
 }
 
-/* Cards */
+.btn-filter.active {
+    background-color: var(--cor-primaria);
+    color: white;
+    font-weight: bold;
+    border: 2px solid var(--cor-primaria);
+    transform: scale(1.05);
+}
+
+/*==========================================================
+    3. BOTÃO "VER MAIS"
+==========================================================*/
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.btn-load-more {
+    background: var(--cor-primaria);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-load-more:hover {
+    background: #e00068;
+}
+
+/*==========================================================
+    4. COMPONENTE CARD (PRODUTO)
+==========================================================*/
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-content: center;
     padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
@@ -54,11 +97,12 @@
     flex-direction: column;
     height: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-top {
@@ -73,7 +117,6 @@
     width: 100%;
 }
 
-/* Tag no canto superior */
 .tag {
     position: absolute;
     top: 12px;
@@ -88,7 +131,6 @@
     z-index: 2;
 }
 
-/* Imagem */
 .card-img {
     width: 100%;
     height: 150px;
@@ -98,40 +140,48 @@
     display: block;
 }
 
-/* Conteúdo do card */
 .card-content {
     padding: 16px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-/* Título */
 .card-title {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 6px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3;
 }
 
-/* Descrição */
 .card-description {
     font-size: 12px;
     margin-bottom: 16px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* Rodapé do card */
 .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
 }
 
-/* Preço */
 .card-price {
     font-size: 18px;
     font-weight: 700;
     color: var(--cor-primaria);
 }
 
-/* Botão */
 .btn-card {
     background: var(--cor-primaria);
     color: white;

@@ -1,6 +1,8 @@
 @import url('style.css');
 
-/*contato*/
+/*==========================================================
+    1. SEÇÃO PRINCIPAL (CONTATO)
+==========================================================*/
 .contato {
     padding: 4rem 2rem;
     text-align: center;
@@ -22,6 +24,11 @@
     padding: 60px 20px;
 }
 
+/*==========================================================
+    2. COMPONENTES DO CONTATO
+==========================================================*/
+
+/* Cartões e Links Sociais */
 .cards-contato {
     display: flex;
     justify-content: center;
@@ -37,20 +44,21 @@
 }
 
 .social-links a {
-  color: #555; /* Cor padrão */
-  font-size: 28px; /* Tamanho do ícone */
+  color: #555;
+  font-size: 28px;
   transition: color 0.3s ease;
 }
 
 .social-links a.instagram:hover {
-  color: #E4405F; /* Cor do Instagram */
+  color: #E4405F;
 }
 
 .social-links a.whatsapp:hover {
-  color: #25D366; /* Cor do WhatsApp */
+  color: #25D366;
 }
 
-form {
+/* Formulário de Contato */
+.Form-contato form { /* Corrigido o seletor para .Form-contato form */
     max-width: 500px;
     margin: auto;
     display: flex;
@@ -65,7 +73,8 @@ input, textarea {
     font-size: 1rem;
 }
 
-form button {
+/* Estilo do botão do formulário (que usa a classe .btn) */
+.Form-contato button {
     width: fit-content;
     align-self: center;
 }

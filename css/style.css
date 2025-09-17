@@ -1,4 +1,6 @@
-/* Variaveis globais */
+/*==========================================================
+    1. VARIÁVEIS E RESET CSS
+==========================================================*/
 :root {
     --cor-primaria: #fd0075;
     --cor-secundaria: #3c2115;
@@ -8,20 +10,41 @@
     --fonte-delicinhas: 'Leckerli One', cursive;
 }
 
-/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* body */
+/*==========================================================
+    2. ESTILOS GERAIS
+==========================================================*/
 .body {
   font-family: var(--fonte-principal);
   color: var(--cor-secundaria);
   background-color: var(--cor-fundo);
   line-height: 1.6;
 }
+
+h2 {
+    font-family: var(--fonte-delicinhas);
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+    color: var(--cor-primaria);
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--cor-fundo);
+    color: var(--cor-secundaria);
+}
+
+/*==========================================================
+    3. SEÇÕES DO SITE
+==========================================================*/
 
 /* Header */
 .header {
@@ -34,7 +57,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -59,27 +81,18 @@
   color: var(--cor-clara);
 }
 
-/* button responsivo */
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--cor-primaria);
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-.menu-btn:hover {
-    color: var(--cor-fundo);
-}
-
-/* Hero */
+/* Hero (Página Inicial) */
 .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('../assets/images/capa.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg,var(--cor-fundo)0%, var(--cor-primaria)100%);
+    position: relative;
     color: white;
     text-align: center;
     padding: 2rem;
@@ -87,23 +100,7 @@
 
 .hero-content {
     max-width: 600px;
-}
-
-h2 {
-    font-family: var(--fonte-delicinhas);
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
-    color: var(--cor-primaria);
-}
-
-/* Sessões */
-section {
-    padding: 4rem 2rem;
-    text-align: center;
-    background: var(--cor-fundo);
-    color: var(--cor-secundaria);
+    z-index: 2; /* Garante que o conteúdo fique sobre o fundo */
 }
 
 .hero h2 {
@@ -116,10 +113,29 @@ section {
 }
 
 .hero a {
-    color: var(--cor-primaria)
+    color: var(--cor-primaria);
 }
 
-/* buttons hero */
+/* Footer */
+.footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-text {
+    margin-block-end: 30px;
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+/*==========================================================
+    4. COMPONENTES REUTILIZÁVEIS
+==========================================================*/
+
+/* Botões em geral */
 .buttons {
     display: flex;
     gap: 1rem;
@@ -148,8 +164,36 @@ section {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade */
+/*==========================================================
+    5. RESPONSIVIDADE
+==========================================================*/
+
+/* Estilos para telas intermediárias (769px a 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .cards {
+        padding: 20px 40px;
+        max-width: none;
+    }
+}
+
+/* Estilos para telas pequenas (<= 768px) */
 @media (max-width: 768px) {
+    /* Navbar e Botão responsivo */
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    
+    /* Outras seções */
     .hero h2 {
         font-size: 2rem;
     }
@@ -165,20 +209,14 @@ section {
         margin: 10px auto;
         font-size: 1rem;
     }
-}
 
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 20px 20px;
+    }
 
-
-.footer{
-    background-color: var(--cor-primaria);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-
-.footer-text {
-    margin-block-end: 30px;
-    font-size: 1rem;
-    color: #f0f0f0;
+    .card {
+        width: 300px;
+        margin: 0 auto;
+    }
 }
