@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Delicinhas da Chica - Trufas e brigadeiros artesanais que derretem na boca e aquecem o coração.">
         <title>Delicinhas da Chica</title>
 
         <!--importa o css-->
@@ -14,22 +15,24 @@
         <!-- Font Awesome para os ícones -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
-
     </head>
     <!--body-->
     <body class="body">
         <!--Cabeçalho-->
         <header class="header">
             <nav class="navbar">
-                <h1 class="logo"><img src="assets/images/Logo_Delicinhas_Color.png" alt="Logo do site" ></h1>
+                <h1 class="logo">
+                    <a href="#inicio" class="logo">
+                        <img src="assets/images/Logo_Delicinhas_Color.png" alt="Delicinhas da Chica">
+                    </a>
+                </h1>
                 <ul class="nav-links">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#cardapio">Cardápio</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-                <button id="menu-toggle" class ="menu-btn">☰</button>
+                <button id="menu-toggle" class ="menu-btn" aria-label="Abrir menu" title="Abrir menu">☰</button>
             </nav>
         </header>
         <!--Seção inicial-->
@@ -37,11 +40,13 @@
             <!--hero | Inicio-->
             <section id="inicio" class="hero">
                 <div class="hero-content">
-                    <h2>Delicinhas da Chica</h2>
+                    <h1><img src="assets/images/Logo_Delicinhas_white.png" alt="Logo do site" class="hero-logo"></h1>
                     <p>Trufas e brigadeiros artesanais que derretem na boca e aquecem o coração</p>
                     <div class="buttons">
-                        <a href="#cardapio" class="btn">🍫 Ver nossos doces </a>
-                        <a href="#sobre" class="btn">💕 Conheça a Chica</a>
+                        <a href="#cardapio" class="btn btn-primary" aria-label="Ver nossos doces" title="Ver nossos doces">
+                            <i class="fa-regular fa-cookie-bite"></i> Ver nossos doces </a>
+                        <a href="#sobre" class="btn btn-secondary" aria-label="Conheça a Chica" title="Conheça a Chica">
+                            <i class="fa-solid fa-heart"></i> Conheça a Chica</a>
                     </div>
                 </div>
             </section>
@@ -50,7 +55,7 @@
             <section id="sobre" class="sobre">
                 <div class="chica-container">
                     <div class="chica-img">
-                        <img src="assets/images/Chica.png" alt="Foto da Chica" >
+                        <img src="assets/images/Chica.png" alt="Chica, criadora das Delicinhas" >
                     </div>
                     <div class="chica-text">
                         <h2>Sobre a Chica</h2>
@@ -64,16 +69,16 @@
             </section>
 
             <!--menu / cardapio-->
-            <section id="cardapio" class="cardapio">
-                <h2>🍫 Nossos produtos</h2>
+            <section id="cardapio" class="cardapio" aria-labelledby="cardapio-title">
+                <h2 id="cardapio-title">🍫 Nossos produtos</h2>
                 <p class="description-cardapio">Descubra nossa seleção especial de trufas e brigadeiros artesanais, preparados com chocolate premium e ingredientes selecionados</p>
 
                 <!-- Botões de filtro -->
                 <div class="filter-buttons">
-                    <button class="btn-filter" onclick="filterMenu('todos')">Todos</button>
-                    <button class="btn-filter" onclick="filterMenu('trufa')">🍫 Trufas</button>
-                    <button class="btn-filter" onclick="filterMenu('brigadeiro')">🧁 Brigadeiros</button>
-                    <button class="btn-filter" onclick="filterMenu('especial')">✨ Especiais</button>
+                    <button class="btn-filter" onclick="filterMenu('todos')" aria-pressed="false">Todos</button>
+                    <button class="btn-filter" onclick="filterMenu('trufa')" aria-pressed="false">🍫 Trufas</button>
+                    <button class="btn-filter" onclick="filterMenu('brigadeiro')" aria-pressed="false">🧁 Brigadeiros</button>
+                    <button class="btn-filter" onclick="filterMenu('especial')" aria-pressed="false">✨ Especiais</button>
                 </div>
 
                 <div class="cards">
@@ -82,7 +87,7 @@
 
                 <!-- Botão de carregar mais -->
                 <div class="load-more-container">
-                    <button id="btn-load-more" class="btn-load-more">Ver mais</button>
+                    <button id="btn-load-more" class="btn btn-primary">Ver mais</button>
                 </div>
             </section>
 
@@ -91,26 +96,30 @@
                 <h2>Entre em contato</h2>
                 <p>Faça seu pedido e experimente nossas deliciosas trufas e brigadeiros artesanais!
                 </p>
-                <div class="container-contato"> 
-                    <div class="cards-contato">
+                <div class="container-contato">
+                    <div class="contact-info">
                         <div class="card-endereco">
-                            <h3>📍 Nosso endereço</h3>
-                            <p>Jardim Igaçaba, Mogi Guaçu - SP</p>
+                            <h3>📍 Nosso Endereço</h3>
+                            <p>Jardim Igaçaba <br> Mogi Guaçu - SP</p>
                         </div>
+
+                        <h3>Siga-nos</h3>
                         <div class="social-links">
-                            <a href="https://www.instagram.com/delicinhasda.chica?igsh=bDNid25kNTB5Mm5o" target="_blank">
+                            <a href="https://www.instagram.com/delicinhasda.chica?igsh=bDNid25kNTB5Mm5o" 
+                            target="_blank"
+                            title="Clique para visitar nosso Instagram">
                                 <i class="fa-brands fa-instagram"></i>
-                                @delicinhasda.chica
                             </a>
                             <a href="https://wa.me/5519971695600?text=Oi,%20estou%20entrando%20em%20contato%20através%20do%20site,%20gostaria%20de%20mais%20informações." 
-                            target="_blank" 
+                            target="_blank"
+                            title="Clique para falar conosco no WhatsApp" 
                             rel="noopener noreferrer">
                             <i class="fa-brands fa-whatsapp"></i>
-                            WhatsApp
                             </a>
+                        </div>
                     </div>
                     <div class="Form-contato">
-                        <form id="form-contato">
+                        <h3>Formulário de Contato</h3> <form id="form-contato">
                             <input type="text" placeholder="Seu nome" required>
                             <input type="email" placeholder="Seu e-mail" required>
                             <textarea placeholder="Sua mensagem" rows="4" required></textarea>
@@ -125,13 +134,13 @@
     <!--footer-->
     <footer class="footer">
         <div class="footer-content">
-            <img src="assets/images/Logo_Delicinhas_White.png" alt="Logo do site" class="footer-logo">
-            <p class="footer-text">Adoçando vidas desde 2022. Feito com amor, carinho e os melhores ingredientes.</p>
+            <img src="assets/images/Logo_Delicinhas_white_footer.png" alt="Delicinhas da Chica" class="footer-logo">
+            <p class="footer-text">Adoçando vidas desde 2022.</p>
         </div>
         <p>&copy; 2025 Delicinhas da Chica. Todos os direitos reservados.</p>
         <p>Site desenvolvolvido por Astrya Tech ✨</p>
     </footer>
 
     <!--importa o js-->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </html>

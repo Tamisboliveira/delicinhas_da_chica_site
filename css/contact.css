@@ -3,6 +3,7 @@
 /*==========================================================
     1. SEÇÃO PRINCIPAL (CONTATO)
 ==========================================================*/
+
 .contato {
     padding: 4rem 2rem;
     text-align: center;
@@ -16,65 +17,165 @@
 
 .container-contato {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 60px 60px;
+    text-align: left;
 }
 
 /*==========================================================
-    2. COMPONENTES DO CONTATO
+    2. BLOCO ESQUERDO: INFORMAÇÕES
 ==========================================================*/
 
-/* Cartões e Links Sociais */
-.cards-contato {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: lefts;
 }
+
+.contact-info h3 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Links Sociais - Estilo do ícone e texto */
 
 .social-links {
   display: flex;
-  gap: 15px;
+  flex-direction: row;
   align-items: center;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .social-links a {
-  color: #555;
-  font-size: 28px;
+  color: var(--cor-secundaria);
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
   transition: color 0.3s ease;
 }
 
-.social-links a.instagram:hover {
-  color: #E4405F;
+.social-links a i {
+    font-size: 28px;
+    margin-right: 8px;
+    color: var(--cor-secundaria);
 }
 
-.social-links a.whatsapp:hover {
-  color: #25D366;
+.social-links a i:hover {
+  color: var(--cor-primaria);
 }
 
-/* Formulário de Contato */
-.Form-contato form { /* Corrigido o seletor para .Form-contato form */
-    max-width: 500px;
-    margin: auto;
+/*==========================================================
+    3. BLOCO DIREITO: FORMULÁRIO
+==========================================================*/
+
+.Form-contato {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Título do Formulário */
+.Form-contato h3 {
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo do formulário */
+.Form-contato form {
+    max-width: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-input, textarea {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
+.Form-contato input,
+.Form-contato textarea {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid var(--cor-fundo);
     border-radius: 8px;
     font-size: 1rem;
+    color: var(--cor-secundaria);
+    transition: all 0.3s ease;
 }
 
-/* Estilo do botão do formulário (que usa a classe .btn) */
+.Form-contato input:focus,
+.Form-contato textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 5px rgba(253, 0, 117, 0.3);
+}
+
+/* Estilo do botão */
 .Form-contato button {
-    width: fit-content;
-    align-self: center;
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 18px 16px;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(253, 0, 117, 0.5);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.Form-contato button:hover {
+    background: #e00068;
+    transform: scale(1.01);
+    box-shadow: 0 8px 18px rgba(253, 0, 117, 0.7);
+}
+
+/*==========================================================
+    4. RESPONSIVIDADE (PARA TELAS PEQUENAS)
+==========================================================*/
+
+@media (max-width: 768px) {
+    .container-contato {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .contact-info,
+    .Form-contato {
+        width: 100%;
+        min-width: auto;
+        text-align: left;
+    }
+    
+    .contato h2,
+    .contato p {
+        text-align: center;
+    }
+
+    /* Centraliza os links sociais em modo coluna */
+    .social-links {
+        align-items: center;
+        flex-direction: row; 
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    .contact-info h3,
+    .contact-info p {
+        text-align: center;
+    }
 }

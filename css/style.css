@@ -5,7 +5,6 @@
     --cor-primaria: #fd0075;
     --cor-secundaria: #3c2115;
     --cor-fundo: #fed7da;
-    --cor-fundo-secundario: #febec4;
     --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --fonte-delicinhas: 'Leckerli One', cursive;
 }
@@ -49,7 +48,7 @@ section {
 /* Header */
 .header {
   background: white;
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   color: var(--cor-primaria);
   position: sticky;
   top: 0;
@@ -79,6 +78,15 @@ section {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--cor-clara);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--cor-primaria);
 }
 
 /* Hero (Página Inicial) */
@@ -112,10 +120,6 @@ section {
     font-size: 1.1rem;
 }
 
-.hero a {
-    color: var(--cor-primaria);
-}
-
 /* Footer */
 .footer {
     background-color: var(--cor-primaria);
@@ -136,32 +140,57 @@ section {
 ==========================================================*/
 
 /* Botões em geral */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 30px; 
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none; 
+}
+
 .buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 10px 0; /* Centraliza verticalmente o grupo */
 }
 
-.btn {
-    display: inline-block;
-    background-color: white;
-    color: var(--cor-escura);
-    padding: 12px 24px;
-    margin: 10px;
-    font-weight: bold;
-    border-radius:30px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: var(--cor-fundo-secundario);
+/* Variação 1: Botão Primário (Rosa Forte) */
+.btn-primary {
+    background-color: var(--cor-primaria);
     color: white;
+    box-shadow: 0 4px 10px rgba(253, 0, 117, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #e00068; /* Versão um pouco mais escura no hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(253, 0, 117, 0.6);
+}
+
+/* Variação 2: Botão Secundário (Branco/Claro) */
+.btn-secondary {
+    background-color: white;
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-fundo);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary i {
+    color: var(--cor-primaria);
+    font-size: 1rem;
+    margin-right: 5px; 
 }
 
 /*==========================================================
@@ -181,6 +210,11 @@ section {
     /* Navbar e Botão responsivo */
     .menu-btn {
         display: block;
+        font-size: 2rem;
+    }
+
+    .header {
+        padding: 1rem 1.5rem;
     }
 
     .nav-links {

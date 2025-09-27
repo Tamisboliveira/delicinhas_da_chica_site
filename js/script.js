@@ -1,7 +1,7 @@
 // Aguarda o carregamento completo do DOM
 document.addEventListener('DOMContentLoaded', () => {
     // URL do arquivo JSON.
-    const url = 'products.json';
+    const url = 'data/products.json';
     
     // Seleciona as divs e botões do HTML.
     const cardsContainer = document.querySelector('.cards');
