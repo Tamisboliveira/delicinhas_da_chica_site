@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 60px 20px;
 }
@@ -21,14 +21,14 @@
 
 /* Container da foto */
 .chica-img {
-    flex: 1 1 350px;
+    flex: 1 600px;
     display: flex;
     justify-content: center; /* Centraliza a imagem no container */
 }
 
 /* A imagem em si */
 .chica-img img {
-    max-width: 320px;
+    max-width: 400px;
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -47,7 +47,7 @@
 
 /* Container do texto */
 .chica-text {
-    flex: 1 1 500px;
+    flex: 1 1 700px;
 }
 
 .chica-text h2 {
@@ -73,7 +73,7 @@
     }
 
     .chica-img {
-        max-width: 260px;
+        max-width: 500px;
     }
     
     .chica-img img {

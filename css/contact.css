@@ -45,6 +45,39 @@
     margin-bottom: 10px;
 }
 
+/* Estilo para o container de métodos de pagamento */
+.payment-methods {
+    margin-top: 30px; /* Espaçamento da seção de endereço */
+    margin-bottom: 30px; /* Espaçamento da seção Siga-nos */
+}
+
+/* Estilo para a linha de ícones */
+.payment-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+/* Estilo para os ícones */
+.payment-icons i {
+    font-size: 24px; /* Ícones grandes e visíveis */
+    color: var(--cor-secundaria); /* Usa a cor rosa forte */
+    transition: transform 0.2s ease;
+}
+
+.payment-icons i:hover {
+    transform: scale(1.1); /* Efeito de destaque no hover */
+}
+
+/* Nota de pagamento, se necessário */
+.payment-methods .payment-note {
+    font-size: 0.9rem;
+    color: var(--cor-secundaria);
+    margin-top: 5px;
+}
+
 /* Links Sociais - Estilo do ícone e texto */
 
 .social-links {

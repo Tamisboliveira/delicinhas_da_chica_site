@@ -1,164 +1,461 @@
 [
     {
         "id": 1,
-        "name": "Brigadeiro com chocolate meio amargo",
+        "name": "Brigadeiro",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio brigadeiro gourmet feito com chocolate meio amargo envolvido com casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/01_Brigadeiro.png",
+        "description": "Recheio cremoso de brigadeiro de chocolate ao leite envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/01_Brigadeiro.png",
         "in_stock": true
     },
     {
         "id": 2,
-        "name": "Beijinho com chocolate meio amargo",
+        "name": "Coco",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de beijinho envolvido com casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/02_Coco.png",
+        "description": "Recheio cremoso de brigadeiro de coco com chocolate branco envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/02_Coco.png",
         "in_stock": true
     },
     {
         "id": 3,
-        "name": "Ninho com Nutella com chocolate meio amargo",
+        "name": "Ninho com Nutella & chocolate dark",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de brigadeiro de ninho com nutella envolvido com casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/03_NinhoNutella.png",
+        "description": "Casquinha de cobertura de chocolate meio amargo com recheio meio a meio de brigadeiro cremoso de leite Ninho com chocolate branco, e Nutella.",
+        "image":"assets/images/products/Trufas/03_NinhoNutellaDark.png",
         "in_stock": true
     },
     {
         "id": 4,
-        "name": "Ninho com Nutella com chocolate branco",
+        "name": "Ninho com Nutella & chocolate branco",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de brigadeiro de ninho com nutella envolvido com casquinha de chocolate branco.",
-        "image":"assets/images/products/04_Ninho_Nutella_Branco.png",
+        "description": "Casquinha de cobertura de chocolate branco com recheio meio a meio de brigadeiro cremoso de leite Ninho com chocolate branco, e Nutella.",
+        "image":"assets/images/products/Trufas/04_NinhoNutellaBranco.png",
         "in_stock": true
     },
     {
         "id": 5,
-        "name": "Biscoito Oreo com chocolate branco",
+        "name": "Oreo",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de brigadeiro de chocolate branco com biscoito oreo na casquinha de chocolate branco.",
-        "image":"assets/images/products/05_Oreo.png",
+        "description": "Recheio cremoso de brigadeiro de Oreo com chocolate branco envolto na casquinha de cobertura de chocolate branco com pedaços de Oreo.",
+        "image":"assets/images/products/Trufas/05_Oreo.png",
         "in_stock": true
     },
     {
         "id": 6,
-        "name": "Churros com chocolate meio amargo",
+        "name": "Churros",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de brigadeiro de churros com canela na casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/06_Churros.png",
+        "description": "Casquinha de cobertura de chocolate meio amargo com recheio meio a meio de brigadeiro cremoso de churros com chocolate branco e canela, e doce de leite.",
+        "image":"assets/images/products/Trufas/06_Churros.png",
         "in_stock": true
     },
     {
         "id": 7,
-        "name": "Paçoca com chocolate meio amargo",
+        "name": "Café & chocolate dark",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com brigadeiro de paçoca na casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/07_Pacoca.png",
+        "description": "Recheio cremoso de brigadeiro de café com chocolate meio amargo (70%) envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/07_CafeDark.png",
         "in_stock": true
     },
     {
         "id": 8,
-        "name": "Café com chocolate branco",
+        "name": "Café & chocolate branco",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com brigadeiro de café na casquinha de chocolate branco.",
-        "image":"assets/images/products/08_Cafe_Branco.png",
+        "description": "Recheio cremoso de brigadeiro de café com chocolate meio amargo (70%) envolto na casquinha de cobertura de chocolate branco.",
+        "image":"assets/images/products/Trufas/08_CafeBranco.png",
         "in_stock": true
     },
     {
         "id": 9,
-        "name": "Maracujá com chocolate meio amargo",
+        "name": "Paçoca",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de brigadeiro com maracujá na casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/09_Maracuja.png",
+        "description": "Recheio cremoso de brigadeiro de paçoca com chocolate branco envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/09_Pacoca.png",
         "in_stock": true
     },
     {
         "id": 10,
-        "name": "Morango com chocolate branco",
+        "name": "Chocolate branco",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de brigadeiro com maracujá na casquinha de chocolate branco.",
-        "image":"",
+        "description": "Recheio cremoso de brigadeiro de chocolate branco envolto na casquinha de cobertura de chocolate branco.",
+        "image":"assets/images/products/Trufas/10_ChocoBranco.png",
         "in_stock": true
     },
     {
         "id": 11,
-        "name": "Morango com chocolate meio amargo",
+        "name": "Maracujá",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de brigadeiro de morango na casquinha de chocolate meio amargo.",
-        "image":"",
+        "description": "Recheio cremoso de brigadeiro de maracujá com chocolate branco envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/11_Maracuja.png",
         "in_stock": true
     },
     {
         "id": 12,
-        "name": "Limão com chocolate meio amargo",
+        "name": "Morango & chocolate dark",
         "price": 7.00,
         "type": "Trufa",
-        "description": "Trufa com recheio de brigadeiro de limão na casquinha de chocolate meio amargo.",
-        "image":"assets/images/products/12_Limao.png",
+        "description": "Recheio cremoso de brigadeiro de morango com chocolate branco envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/12_MorangoDark.png",
         "in_stock": true
     },
     {
         "id": 13,
-        "name": "Caixa com 02 (duas) trufas",
-        "price": 22.00,
-        "type": "Especial",
-        "description": "Delicioso brigadeiro gourmet feito com chocolate meio amargo de alta qualidade, proporcionando um sabor intenso e cremoso. Perfeito para quem aprecia um toque sofisticado no clássico doce brasileiro.",
-        "image":"",
+        "name": "Morango & chocolate branco",
+        "price": 7.00,
+        "type": "Trufa",
+        "description": "Recheio cremoso de brigadeiro de morango com chocolate branco envolto na casquinha de cobertura de chocolate branco.",
+        "image":"assets/images/products/Trufas/13_MorangoBranco.png",
         "in_stock": true
     },
     {
         "id": 14,
-        "name": "Caixa com 04 (quatro) trufas",
-        "price": 36.00,
-        "type": "Especial",
-        "description": "Delicioso brigadeiro gourmet feito com chocolate meio amargo de alta qualidade, proporcionando um sabor intenso e cremoso. Perfeito para quem aprecia um toque sofisticado no clássico doce brasileiro.",
-        "image":"",
+        "name": "Limão",
+        "price": 7.00,
+        "type": "Trufa",
+        "description": "Recheio cremoso de brigadeiro de limão com chocolate branco envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/14_Limao.png",
         "in_stock": true
     },
     {
         "id": 15,
-        "name": "Caixa com 06 (seis) trufas",
-        "price": 51.00,
-        "type": "Especial",
-        "description": "Delicioso brigadeiro gourmet feito com chocolate meio amargo de alta qualidade, proporcionando um sabor intenso e cremoso. Perfeito para quem aprecia um toque sofisticado no clássico doce brasileiro.",
-        "image":"",
+        "name": "Pistache & chocolate dark",
+        "price": 7.00,
+        "type": "Trufa",
+        "description": "Recheio cremoso de brigadeiro de pistache com chocolate branco envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/15_PistacheDark.png",
         "in_stock": true
     },
     {
         "id": 16,
-        "name": "Brigadeiro Gourmet - 25 unidades",
-        "price": 68.00,
-        "type": "Brigadeiro",
-        "description": "Escolha um sabor: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
-        "image":"assets/images/products/16_Brigadeiro_25.png",
+        "name": "Pistache & chocolate branco",
+        "price": 7.00,
+        "type": "Trufa",
+        "description": "Recheio cremoso de brigadeiro de pistache com chocolate branco envolto na casquinha de cobertura de chocolate branco saborizado com pistache.",
+        "image":"assets/images/products/Trufas/16_PistacheBranco.png",
         "in_stock": true
     },
     {
         "id": 17,
-        "name": "Brigadeiro Gourmet - 50 unidades",
-        "price": 135.00,
-        "type": "Brigadeiro",
-        "description": "Escolha até 02 sabores: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
-        "image":"assets/images/products/17_Brigadeiro_50.png",
+        "name": "Menta",
+        "price": 7.00,
+        "type": "Trufa",
+        "description": "Intensidade refrescante. O chocolate meio amargo e o recheio cremoso de menta. Desperta e revigora a cada mordida.",
+        "image":"assets/images/products/Trufas/17_Menta.png",
         "in_stock": true
     },
     {
         "id": 18,
-        "name": "Brigadeiro Gourmet - 100 unidades",
-        "price": 250.00,
+        "name": "Cappuccino",
+        "price": 7.00,
+        "type": "Trufa",
+        "description": "Recheio cremoso de brigadeiro de chocolate branco com café e canela envolto na casquinha de cobertura de chocolate branco.",
+        "image":"assets/images/products/Trufas/18_Cappuccino.png",
+        "in_stock": true
+    },
+    {
+        "id": 19,
+        "name": "Abacaxi",
+        "price": 7.00,
+        "type": "Trufa",
+        "description": "Recheio cremoso de brigadeiro de abacaxi com chocolate branco envolto na casquinha de cobertura de chocolate meio amargo.",
+        "image":"assets/images/products/Trufas/19_Abacaxi.png",
+        "in_stock": true
+    },
+    {
+        "id": 20,
+        "name": "Caixa pequena doçura",
+        "price": 22.00,
+        "type": "especial",
+        "description": "Caixa Pequena Doçura: Um gesto pequeno, mas cheio de carinho. Caixa com 2 unidades de trufas sortidas.",
+        "image":"assets/images/products/Especiais/pequena_docura.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 21,
+        "name": "Caixa doce abraço",
+        "price": 36.00,
+        "type": "especial",
+        "description": "Caixa doce abraço: Um mimo aconchegante em forma de chocolate. Caixa com 4 unidades de trufas sortidas.",
+        "image":"assets/images/products/Especiais/doce_abraco.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 22,
+        "name": "Caixa da alegria",
+        "price": 51.00,
+        "type": "especial",
+        "description": "Caixa da alegria: Uma seleção completa para agradar quem você ama. Caixa com 6 unidades de trufas sortidas.",
+        "image":"assets/images/products/Especiais/caixa_alegria.JPG",
+        "in_stock": true
+    },
+    {
+        "id": 23,
+        "name": "Brigadeiro",
+        "price": 0.00,
         "type": "Brigadeiro",
-        "description": "Escolha até 04 sabores: Brigadeiro, Beijinho, Casadinho, Churros, Ninho, Café, Branco e 70% Cacau",
-        "image":"assets/images/products/18_Brigadeiro_100.png",
+        "description": "Produzido com leite condensado Moça, creme de leite e chocolate blend, e envolto no granulado tradicional de chocolate.",
+        "image":"assets/images/products/Brigadeiro/brigadeiro.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 24,
+        "name": "Beijinho",
+        "price": 0.00,
+        "type": "Brigadeiro",
+        "description": "Produzido com leite condensado Moça, creme de leite e chocolate branco, e envolto em flocos de coco seco.",
+        "image":"assets/images/products/Brigadeiro/beijinho.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 25,
+        "name": "Churros",
+        "price": 0.00,
+        "type": "Brigadeiro",
+        "description": "Produzido com leite condensado Moça, creme de leite, chocolate branco, doce de leite e canela, e envolto no açucar cristal.",
+        "image":"assets/images/products/Brigadeiro/churros.png",
+        "in_stock": true
+    },
+    {
+        "id": 26,
+        "name": "Leite ninho",
+        "price": 0.00,
+        "type": "Brigadeiro",
+        "description": "Produzido com leite condensado Moça, creme de leite, chocolate branco e leite em pó Ninho, e também envolto no leite em pó Ninho.",
+        "image":"assets/images/products/Brigadeiro/leite_ninho.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 27,
+        "name": "Casadinho",
+        "price": 0.00,
+        "type": "Brigadeiro",
+        "description": "Tem uma metade do brigadeiro tradicional e a outra metade do docinho de leite Ninho, e envolto no açucar cristal.",
+        "image":"assets/images/products/Brigadeiro/casadinho.png",
+        "in_stock": true
+    },
+    {
+        "id": 28,
+        "name": "Café",
+        "price": 0.00,
+        "type": "Brigadeiro",
+        "description": "Produzido com leite condensado Moça, creme de leite, chocolate 70% cacau e café solúvel, e envolto no açucar cristal.",
+        "image":"assets/images/products/Brigadeiro/cafe.png",
+        "in_stock": true
+    },
+    {
+        "id": 29,
+        "name": "Chocolate branco",
+        "price": 0.00,
+        "type": "Brigadeiro",
+        "description": "Produzido com leite condensado Moça, creme de leite e chocolate branco, e envolto no granulado tradicional de chocolate branco.",
+        "image":"assets/images/products/Brigadeiro/chocolate_branco.png",
+        "in_stock": true
+    },
+    {
+        "id": 30,
+        "name": "Chocolate dark 70%",
+        "price": 0.00,
+        "type": "Brigadeiro",
+        "description": "Produzido com leite condensado Moça, creme de leite e chocolate 70% cacau, e envolto no granulé de chocolate meio amargo.",
+        "image":"assets/images/products/Brigadeiro/chocolate_branco.png",
+        "in_stock": true
+    },
+    {
+        "id": 31,
+        "name": "Bolo de Laranja",
+        "price": 40.00,
+        "type": "bolo",
+        "description": "Feito com suco natural da fruta, nada de essências artificiais, esse bolo é puro sabor de laranja de verdade. Fofinho, aromático e com uma caldinha delicada feita da própria fruta, finalizado com um toque leve de açúcar polvilhado. Um clássico simples e irresistível, perfeito para o café da tarde ou para adoçar o dia com sabor de casa. Serve aproximadamente até 20 pessoas",
+        "image":"assets/images/products/Bolo/laranja.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 32,
+        "name": "Bolo Formigueiro",
+        "price": 40.00,
+        "type": "bolo",
+        "description": "Sabe aquele cheirinho de bolo de vó saindo do forno? É exatamente isso que você vai sentir! Feito com massa macia e pedacinhos de chocolate espalhados por dentro, esse clássico desperta memórias de infância e aconchego em cada fatia. Perfeito para acompanhar um café quentinho e trazer um gostinho de lar pra qualquer momento. Serve aproximadamente até 20 pessoas",
+        "image":"assets/images/products/Bolo/formigueiro.png",
+        "in_stock": true
+    },
+    {
+        "id": 33,
+        "name": "Bolo Fubá & Goiabada",
+        "price": 50.00,
+        "type": "bolo",
+        "description": "O clássico que cheira a tarde tranquila e casa de família. Massa de fubá bem macia, daquele jeitinho que desmancha na boca, e uma caldinha deliciosa de goiabada que traz o doce perfeito da nostalgia. Simples, aconchegante e cheio de memória afetiva. É o tipo de bolo que faz qualquer momento ficar mais gostoso.Serve aproximadamente até 20 pessoas",
+        "image":"assets/images/products/Bolo/fuba_goiabada.png",
+        "in_stock": true
+    },
+    {
+        "id": 34,
+        "name": "Bolo de Chocolate Pequeno",
+        "price": 48.00,
+        "type": "bolo",
+        "description": "Clássico, macio e com aquele sabor que abraça! Feito com massa de chocolate fofinha e uma generosa cobertura de brigadeiro cremoso, finalizado com granulados que trazem o toque da infância. Serve aproximadamente até 15 pessoas.",
+        "image":"assets/images/products/Bolo/chocolate.png",
+        "in_stock": true
+    },
+    {
+        "id": 35,
+        "name": "Bolo de Chocolate Grande",
+        "price": 65.00,
+        "type": "bolo",
+        "description": "Clássico, macio e com aquele sabor que abraça! Feito com massa de chocolate fofinha e uma generosa cobertura de brigadeiro cremoso, finalizado com granulados que trazem o toque da infância. Serve aproximadamente até 22 pessoas.",
+        "image":"assets/images/products/Bolo/chocolate.png",
+        "in_stock": true
+    },
+    {
+        "id": 36,
+        "name": "Bolo de Cenoura Pequeno",
+        "price": 48.00,
+        "type": "bolo",
+        "description": "Massa de cenoura bem fofinha, saborosa e úmida na medida certa, coberta com um brigadeiro cremoso feito com chocolate de verdade. É aquele bolo que lembra casa, carinho e mesa cheia. É simples, gostoso e impossível de resistir. Serve aproximadamente até 15 pessoas",
+        "image":"assets/images/products/Bolo/cenoura.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 37,
+        "name": "Bolo de Cenoura Grande",
+        "price": 65.00,
+        "type": "bolo",
+        "description": "Massa de cenoura bem fofinha, saborosa e úmida na medida certa, coberta com um brigadeiro cremoso feito com chocolate de verdade. É aquele bolo que lembra casa, carinho e mesa cheia. É simples, gostoso e impossível de resistir. Serve aproximadamente até 22 pessoas",
+        "image":"assets/images/products/Bolo/cenoura.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 38,
+        "name": "Bolo de Churros Pequeno",
+        "price": 65.00,
+        "type": "bolo",
+        "description": "Massa branca macia e cobertura de brigadeiro cremoso de churros com doce de leite e um toque especial de canela que perfuma a alma. Sabor de aconchego, de lembranças boas e daquele doce carinho que só um bolo feito com calma entrega. Serve aproximadamente até 15 pessoas",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 39,
+        "name": "Bolo de Churros Grande",
+        "price": 80.00,
+        "type": "bolo",
+        "description": "Massa branca macia e cobertura de brigadeiro cremoso de churros com doce de leite e um toque especial de canela que perfuma a alma. Sabor de aconchego, de lembranças boas e daquele doce carinho que só um bolo feito com calma entrega. Serve aproximadamente até 22 pessoas",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 40,
+        "name": "Brigadeiro",
+        "price": 10.00,
+        "type": "pote",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 41,
+        "name": "Cenoura",
+        "price": 10.00,
+        "type": "pote",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 42,
+        "name": "Churros",
+        "price": 10.00,
+        "type": "pote",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 43,
+        "name": "Prestígio",
+        "price": 10.00,
+        "type": "pote",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 44,
+        "name": "Coco",
+        "price": 10.00,
+        "type": "pote",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 45,
+        "name": "Limão",
+        "price": 10.00,
+        "type": "pote",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 46,
+        "name": "Abacaxi",
+        "price": 10.00,
+        "type": "pote",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 47,
+        "name": "Brigadeiro",
+        "price": 18.00,
+        "type": "Colher",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 48,
+        "name": "Maracujá",
+        "price": 18.00,
+        "type": "Colher",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 49,
+        "name": "Casadinho",
+        "price": 18.00,
+        "type": "Colher",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 50,
+        "name": "Coco",
+        "price": 18.00,
+        "type": "Colher",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
+        "in_stock": true
+    },
+    {
+        "id": 51,
+        "name": "Limão",
+        "price": 18.00,
+        "type": "Colher",
+        "description": "Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial! Peso aproximado: 180g",
+        "image":"assets/images/products/Bolo/churros.jpg",
         "in_stock": true
     }
 ]
