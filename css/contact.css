@@ -15,6 +15,7 @@
     color: var(--cor-secundaria);
 }
 
+/* Container principal */
 .container-contato {
     display: flex;
     align-items: flex-start;
@@ -33,11 +34,11 @@
 .contact-info {
     flex: 1;
     min-width: 300px;
-    text-align: lefts;
+    text-align: left;
 }
 
 .contact-info h3 {
-    font-family: var(--font-primary);
+    font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--cor-primaria);
@@ -45,7 +46,9 @@
     margin-bottom: 10px;
 }
 
-/* Estilo para o container de métodos de pagamento */
+/* ==========================================================
+   MÉTODOS DE PAGAMENTO
+========================================================== */
 .payment-methods {
     margin-top: 30px; /* Espaçamento da seção de endereço */
     margin-bottom: 30px; /* Espaçamento da seção Siga-nos */
@@ -78,8 +81,9 @@
     margin-top: 5px;
 }
 
-/* Links Sociais - Estilo do ícone e texto */
-
+/* ==========================================================
+   LINKS SOCIAIS
+========================================================== */
 .social-links {
   display: flex;
   flex-direction: row;
@@ -103,6 +107,7 @@
     color: var(--cor-secundaria);
 }
 
+.social-links a:hover,
 .social-links a i:hover {
   color: var(--cor-primaria);
 }
@@ -135,6 +140,7 @@
     gap: 1rem;
 }
 
+/* Inputs */
 .Form-contato input,
 .Form-contato textarea {
     padding: 1rem;

@@ -21,7 +21,7 @@
 
 /* Container da foto */
 .chica-img {
-    flex: 1 600px;
+    flex: 1 1 600px;
     display: flex;
     justify-content: center; /* Centraliza a imagem no container */
 }
@@ -73,7 +73,7 @@
     }
 
     .chica-img {
-        max-width: 500px;
+        max-width: 90%;
     }
     
     .chica-img img {

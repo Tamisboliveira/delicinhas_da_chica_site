@@ -1,6 +1,6 @@
-/*==========================================================
-    1. VARIÁVEIS E RESET CSS
-==========================================================*/
+/* ==========================================================
+   1. VARIÁVEIS E RESET
+========================================================== */
 :root {
     --cor-primaria: #fd0075;
     --cor-secundaria: #3c2115;
@@ -10,19 +10,25 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*==========================================================
-    2. ESTILOS GERAIS
-==========================================================*/
-.body {
-  font-family: var(--fonte-principal);
-  color: var(--cor-secundaria);
-  background-color: var(--cor-fundo);
-  line-height: 1.6;
+/* ==========================================================
+   2. BASE / ESTILOS GLOBAIS
+========================================================== */
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--cor-secundaria);
 }
 
 h2 {
@@ -34,227 +40,75 @@ h2 {
     color: var(--cor-primaria);
 }
 
-section {
-    padding: 4rem 2rem;
-    text-align: center;
-    background: var(--cor-fundo);
-    color: var(--cor-secundaria);
-}
+/* ==========================================================
+   3. LAYOUT PRINCIPAL
+========================================================== */
 
-/*==========================================================
-    3. SEÇÕES DO SITE
-==========================================================*/
-
-/* Header */
+/* ---------- Header / Navbar ---------- */
 .header {
-  background: white;
-  padding: 1rem 4rem;
-  color: var(--cor-primaria);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 1rem 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-  color: var(--cor-secundaria);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--cor-clara);
-}
-
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
     color: var(--cor-primaria);
 }
 
-/* Hero (Página Inicial) */
-.hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                      url('../assets/images/capa.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-.hero-content {
-    max-width: 600px;
-    z-index: 2; /* Garante que o conteúdo fique sobre o fundo */
-}
-
-.hero h2 {
-    color: white;
-}
-
-.hero p {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-    color: white;
-}
-
-/*==========================================================
-    FOOTER
-==========================================================*/
+/* ---------- Footer (layout) ---------- */
 .footer {
-    /* Usa o marrom escuro como fundo, cor clássica para rodapés. */
-    background-color: var(--cor-secundaria); 
-    color: white; /* Garante que todo o texto seja branco */
-    padding: 3rem 4rem 1rem; /* Espaço em cima e nas laterais */
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 3rem 4rem 1rem;
 }
 
-/* Layout de 3 colunas para desktop */
 .footer-grid {
     display: grid;
-    /* Divide em 3 colunas, dando mais espaço para a primeira coluna (Logo) */
-    grid-template-columns: 2fr 1fr 1fr; 
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 50px;
     max-width: 1400px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px;
     text-align: left;
 }
 
-/* Estilo para títulos das colunas (Contato, Siga-nos) */
-.footer-col h4 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 20px;
-}
+/* ==========================================================
+   4. COMPONENTES
+========================================================== */
 
-/* Estilo para o logo e texto na primeira coluna */
-.footer-about .footer-logo {
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.footer-about p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: white;
-}
-
-/* Estilo geral dos parágrafos do rodapé */
-.footer-col p {
-    margin-bottom: 10px;
-    display: flex; /* Para alinhar ícone e texto */
-    align-items: center;
-    font-size: 1rem;
-}
-
-/* Estilo para os ícones */
-.footer-col p i,
-.footer-social-links i {
-    color: var(--cor-primaria); /* Ícones em rosa forte */
-    margin-right: 10px;
-    min-width: 20px;
-}
-
-/* Links Sociais (Col 3) */
-.footer-social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-}
-
-.footer-social-links a:hover {
-    color: var(--cor-primaria); /* Link fica rosa forte no hover */
-}
-
-/* Quebra de linha e direitos autorais */
-.footer-bottom hr {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin: 30px auto 15px;
-}
-
-.footer-bottom p {
-    font-size: 0.9rem;
-    margin-top: 10px;
-    text-align: center;
-    color: #f0f0f0;
-}
-
-/* Responsividade para celular */
-@media (max-width: 768px) {
-    .footer {
-        padding: 2rem 1.5rem 1rem;
-    }
-    
-    .footer-grid {
-        /* Empilha as colunas */
-        grid-template-columns: 1fr; 
-        gap: 40px;
-        text-align: center;
-    }
-
-    .footer-col {
-        /* Centraliza conteúdo nas colunas empilhadas */
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        color: white;
-    }
-
-    .footer-col p {
-        justify-content: center; /* Centraliza ícones e textos */
-        color: white;
-    }
-}
-
-/*==========================================================
-    4. COMPONENTES REUTILIZÁVEIS
-==========================================================*/
-
-/* Botões em geral */
+/* ---------- Botões ---------- */
 .btn {
     display: inline-block;
     padding: 12px 24px;
     font-weight: bold;
-    border-radius: 30px; 
+    border-radius: 30px;
     text-decoration: none;
     font-size: 1rem;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: none; 
+    border: none;
 }
 
 .buttons {
@@ -262,10 +116,9 @@ section {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 10px 0; /* Centraliza verticalmente o grupo */
+    margin: 10px 0;
 }
 
-/* Variação 1: Botão Primário (Rosa Forte) */
 .btn-primary {
     background-color: var(--cor-primaria);
     color: white;
@@ -273,12 +126,11 @@ section {
 }
 
 .btn-primary:hover {
-    background-color: #e00068; /* Versão um pouco mais escura no hover */
+    background-color: #e00068;
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(253, 0, 117, 0.6);
 }
 
-/* Variação 2: Botão Secundário (Branco/Claro) */
 .btn-secondary {
     background-color: white;
     color: var(--cor-primaria);
@@ -294,15 +146,144 @@ section {
 
 .btn-secondary i {
     color: var(--cor-primaria);
-    font-size: 1rem;
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
-/*==========================================================
-    5. RESPONSIVIDADE
-==========================================================*/
+/* ---------- Menu Mobile ---------- */
+.menu-btn {
+    width: 30px;
+    height: 24px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
 
-/* Estilos para telas intermediárias (769px a 1200px) */
+.menu-btn span {
+    height: 4px;
+    width: 100%;
+    background: var(--cor-primaria);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-btn.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px);
+}
+
+/* ---------- Overlay ---------- */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ==========================================================
+   5. SEÇÕES DO SITE
+========================================================== */
+
+/* ---------- Hero ---------- */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('../assets/images/capa.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero h2 {
+    color: white;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* ---------- Footer (conteúdo) ---------- */
+.footer-col h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-col i,
+.footer-social-links i {
+    color: var(--cor-primaria);
+    margin-right: 10px;
+}
+
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social-links a:hover {
+    color: var(--cor-primaria);
+}
+
+.footer-bottom hr {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin: 30px 0 15px;
+}
+
+.footer-bottom p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #f0f0f0;
+}
+
+/* ==========================================================
+   6. RESPONSIVIDADE
+========================================================== */
+
+/* ---------- Tablets ---------- */
 @media (min-width: 769px) and (max-width: 1200px) {
     .cards {
         padding: 20px 40px;
@@ -310,52 +291,69 @@ section {
     }
 }
 
-/* Estilos para telas pequenas (<= 768px) */
+/* ---------- Mobile ---------- */
 @media (max-width: 768px) {
-    /* Navbar e Botão responsivo */
-    .menu-btn {
-        display: block;
-        font-size: 2rem;
-    }
 
+    /* Header */
     .header {
         padding: 1rem 1.5rem;
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: white;
-        position: absolute;
-        top: 60px;
-        left: 0;
+    .menu-btn {
+        display: flex;
     }
-    
-    /* Outras seções */
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        width: 260px;
+        height: 100vh;
+        flex-direction: column;
+        background: white;
+        padding: 80px 20px;
+        gap: 20px;
+        box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    /* Hero */
+    .hero {
+        background-attachment: scroll;
+    }
+
     .hero h2 {
         font-size: 2rem;
     }
 
     .hero p {
         font-size: 1.2rem;
-        margin-bottom: 30px;
     }
 
     .hero .btn {
-        display: block;
         width: 80%;
         margin: 10px auto;
-        font-size: 1rem;
+        display: block;
     }
 
-    .cards {
+    /* Footer */
+    .footer {
+        padding: 2rem 1.5rem 1rem;
+    }
+
+    .footer-grid {
         grid-template-columns: 1fr;
-        padding: 20px 20px;
+        text-align: center;
     }
 
-    .card {
-        width: 300px;
-        margin: 0 auto;
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
