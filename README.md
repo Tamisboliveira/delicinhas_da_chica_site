@@ -2,7 +2,8 @@
 
 ## 🍫 Visão Geral do Projeto
 
-Este é o site oficial da **Delicinhas da Chica**, uma confeitaria artesanal especializada em trufas e brigadeiros gourmet. O objetivo principal do site é servir como um **catálogo de produtos** visualmente atraente e um canal direto para **pedidos via WhatsApp**.
+Este é o site oficial da **Delicinhas da Chica**, uma confeitaria artesanal especializada em trufas e brigadeiros gourmet. O objetivo principal do site é servir como um **catálogo digital interativo** permitindo que os clientes visualizem os produtos e façam pedidos de forma simples e direta via **WhatsApp**.
+> 💡 Não se trata de um e-commerce tradicional, mas de uma solução leve e acessível para pequenos negócios.
 
 O projeto foi construído do zero, utilizando as tecnologias front-end padrão, com foco total em usabilidade (UX) e design responsivo.
 
@@ -36,9 +37,10 @@ A paleta de cores é inspirada nos tons de chocolate e morango, refletindo a do�
 
 * **Catálogo Dinâmico:** Carregamento de produtos a partir de um arquivo `products.json` usando JavaScript.
 * **Filtragem de Produtos:** Permite filtrar o cardápio por categoria (Trufas, Brigadeiros, Especiais) com destaque visual no filtro ativo.
-* **Carregamento Otimizado:** Exibe apenas os primeiros 6 produtos por padrão, com um botão "Ver Mais" para carregar o restante (funcionalidade de paginação).
+* **Carregamento Otimizado:** Exibe apenas os primeiros 8 produtos por padrão, com um botão "Ver Mais" para carregar o restante (funcionalidade de paginação).
 * **Design Responsivo:** Layout fluido que se adapta perfeitamente a todos os dispositivos (celulares, tablets e desktops).
 * **Chamadas para Ação Diretas:** Links de pedido direto para o WhatsApp em cada card de produto e na seção de Contato.
+* **Arquitetura CSS Modular:** Estilos organizados por seções (`about.css`, `menu.css`, `contact.css`) com um arquivo global (`style.css`) para cores, tipografia e componentes reutilizáveis.
 
 ---
 
@@ -65,11 +67,11 @@ Para ver o site localmente, siga estes passos:
 ├── assets/
 │   └── images/              # Imagens do logo e capa
 │       └── products/        # Imagens dos produtos (recheios, caixas)
-├── css/                     # Estilos (globais e por seção)
-│   ├── about.css
-│   ├── contact.css
-│   ├── menu.css
-│   └── style.css
+├── css/
+│   ├── style.css            # Estilos globais, layout base e variáveis
+│   ├── menu.css             # Estilos do cardápio e filtros
+│   ├── about.css            # Seção "Sobre"
+│   └── contact.css          # Formulário e informações de contato
 ├── data/                    # Dados do projeto
 │   └── products.json        # Banco de dados dos produtos
 ├── js/
