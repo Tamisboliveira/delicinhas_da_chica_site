@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
+        <!-- ==============================
+         META & SEO
+        ============================== -->
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Delicinhas da Chica - Trufas e brigadeiros artesanais que derretem na boca e aquecem o coração.">
         <title>Delicinhas da Chica</title>
 
+        <!-- ==============================
+         ESTILOS
+        ============================== -->
         <!--importa o css-->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/about.css">
@@ -16,9 +23,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     </head>
-    <!--body-->
+
     <body class="body">
-        <!--Cabeçalho-->
+        <!-- ==============================
+         HEADER / NAVEGAÇÃO
+        ============================== -->
+
         <header class="header">
             <nav class="navbar">
                 <h1 class="logo">
@@ -32,12 +42,26 @@
                     <li><a href="#cardapio">Cardápio</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-                <button id="menu-toggle" class ="menu-btn" aria-label="Abrir menu" title="Abrir menu">☰</button>
+
+                <button id="menu-toggle" class="menu-btn" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
             </nav>
         </header>
-        <!--Seção inicial-->
+
+        <div class="menu-overlay"></div>
+
+        <!-- ==============================
+         CONTEÚDO PRINCIPAL
+        ============================== -->
+
         <main>
-            <!--hero | Inicio-->
+            <!-- ==============================
+             HERO / INÍCIO
+            ============================== -->
             <section id="inicio" class="hero">
                 <div class="hero-content">
                     <h1><img src="assets/images/Logo_Delicinhas_white.png" alt="Logo do site" class="hero-logo"></h1>
@@ -51,7 +75,9 @@
                 </div>
             </section>
 
-            <!--about-->
+            <!-- ==============================
+             ABOUT
+            ============================== -->
             <section id="sobre" class="sobre">
                 <div class="chica-container">
                     <div class="chica-img">
@@ -71,50 +97,47 @@
                 </div>
             </section>
 
-            <!--menu / cardapio-->
+            <!-- ==============================
+             CARDÁPIO
+            ============================== -->
             <section id="cardapio" class="cardapio" aria-labelledby="cardapio-title">
                 <h2 id="cardapio-title">🍫 Nossos produtos</h2>
 
+                <!-- Introdução geral -->
                 <div id="general-intro">
-                    <p class="intro-title">Nossas delícias: 100% artesanal e com qualidade profissional</p>
-                    <p class="intro-description">Nós somos a sua doceria caseira sob encomenda, focada em qualidade e sabor que lembram a casa da vovó. Trabalhamos exclusivamente sob pedido para garantir que tudo chegue fresquinho e perfeito para você ou para tornar sua festa ainda mais inesquecível. Em nosso catálogo, você encontra:</p>
+
+                    <p class="intro-title">
+                        Nossas delícias: 100% artesanal e com qualidade profissional.
+                    </p>
+                    
+                    <p class="intro-description">
+                        Nós somos a sua doceria caseira sob encomenda, focada em qualidade e sabor que lembram a casa da vovó. Trabalhamos exclusivamente sob pedido para garantir que tudo chegue fresquinho e perfeito para você ou para tornar sua festa ainda mais inesquecível.
+                    </p>
+                    
                     <p class="intro-description"> 
-                        <strong>Trufas artesanais que vão te surpreender:</strong> Nosso carro-chefe! São mais de 15 sabores que variam diariamente. Perfeitas para um mimo individual ou como um presente sofisticado em nossas caixas presenteáveis. Sempre temos sabores variados a pronta-entrega para saciar a sua vontade de chocolate imediatamente!
-                        <br><br>
-                        <strong>O Presente perfeito para encantar!</strong> Surpreender alguém especial ficou ainda mais delicioso!
-                        Nossas trufas têm aquele sabor inconfundível de afeto e conforto, de doce feito em casa. Com as Delicinhas da Chica, você monta a caixa perfeita, a escolha é sua: personalize a seleção de trufas que mais combina com a pessoa especial (ou com o seu desejo do dia), e transforme qualquer ocasião em um momento doce, inesquecível e totalmente pensado com o carinho que só um presente artesanal pode oferecer.
-                        <br><br>
-                        <strong>Docinhos gourmet para festa:</strong> Para festas inesquecíveis, o segredo está no detalhe! Escolha entre 8 opções de sabores especiais de docinhos, todos feitos sob encomenda (a partir de 25 unidades) para assegurar que cada mordida tenha o máximo de sabor e qualidade gourmet.
-                        <br><br>
-                        <strong>Brigadeiro no pote - Felicidade para comer de colher!</strong> Os docinhos clássicos mais amados do Brasil, agora em uma versão individual, cremosa, generosa e impossível de resistir!
-                        Feitos com chocolates premium e ingredientes de alta qualidade, nossos brigadeiros no pote derretem na boca e trazem aquele sabor de festa que abraça por dentro.
-                        Perfeitos para adoçar o seu dia, levar para onde você for ou presentear e mimar alguém especial. É a dose ideal de felicidade em um pote!
-                        <br><br>
-                        <strong>Bolos caseirinhos:</strong> A pedida perfeita para qualquer momento! Nossos bolos são feitos de forma artesanal, em seis opções de sabores. Simplesmente deliciosos e feitos com aquele toque caseiro que a gente ama!
-                        <br><br>
-                        <strong>Bolos no pote:</strong> Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial!
-                        Nossos bolos no pote estão disponíveis em três sabores clássicos e irresistíveis, preparados com todo cuidado para entregar aquela combinação única de bolo macio com brigadeiro cremoso.
-                        É impossível escolher um só, cada colherada é uma dose perfeita de felicidade para a sua sobremesa, lanche ou para surpreender quem você ama!
-                        <br><br>
+                        <strong>Doces artesanais feitos para encantar em qualquer ocasião.</strong><br><br>
+                        Trufas, docinhos gourmet, brigadeiros de colher e bolos preparados com ingredientes de qualidade, muito carinho e aquele sabor de feito em casa.
+                        Perfeitos para um mimo, um presente especial ou para adoçar seu dia com praticidade e afeto.
                     </p>
 
                     <p class="intro-description">Use os botões abaixo para filtrar por tipo de doce!</p>
                 </div>
 
-                <div id="category-description" class="category-description">
-                </div>
+                <!-- Texto da categoria -->
+                <div id="category-description" class="category-description"></div>
 
                 <!-- Botões de filtro -->
                 <div class="filter-buttons">
-                    <button class="btn-filter" onclick="filterMenu('todos')" aria-pressed="false">Todos</button>
-                    <button class="btn-filter" onclick="filterMenu('trufa')" aria-pressed="false">Trufas</button>
-                    <button class="btn-filter" onclick="filterMenu('especial')" aria-pressed="false">Especiais</button>
-                    <button class="btn-filter" onclick="filterMenu('brigadeiro')" aria-pressed="false">Para festa</button>
-                    <button class="btn-filter" onclick="filterMenu('colher')" aria-pressed="false">Brigadeiro de colher</button>
-                    <button class="btn-filter" onclick="filterMenu('bolo')" aria-pressed="false">Bolo caseiro</button>
-                    <button class="btn-filter" onclick="filterMenu('pote')" aria-pressed="false">Bolo no pote</button>
+                    <button class="btn-filter active" data-category="todos">Todos</button>
+                    <button class="btn-filter" data-category="trufa">Trufas</button>
+                    <button class="btn-filter" data-category="especial">Especiais</button>
+                    <button class="btn-filter" data-category="brigadeiro">Para festa</button>
+                    <button class="btn-filter" data-category="colher">De colher</button>
+                    <button class="btn-filter" data-category="bolo">Bolo</button>
+                    <button class="btn-filter" data-category="pote">Bolo no pote</button>
                 </div>
 
+                <!-- Cards -->
                 <div class="cards">
                     <!-- Os cards dos produtos serão inseridos aqui via JavaScript -->
                 </div>
@@ -125,11 +148,15 @@
                 </div>
             </section>
 
-            <!--contact-->
+            <!-- ==============================
+             CONTATO
+            ============================== -->
             <section id="contato" class="contato">
                 <h2>Entre em contato</h2>
                 <p>Faça seu pedido e experimente nossas deliciosas trufas e brigadeiros artesanais!</p>
+
                 <div class="container-contato">
+
                     <div class="contact-info">
                         <div class="card-endereco">
                             <h3>📍 Nosso Endereço</h3>
@@ -148,19 +175,25 @@
 
                         <h3>Siga-nos</h3>
                         <div class="social-links">
+                            
                             <a href="https://www.instagram.com/delicinhasda.chica?igsh=bDNid25kNTB5Mm5o" 
                             target="_blank"
                             title="Clique para visitar nosso Instagram">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
+                            
                             <a href="https://wa.me/5519971695600?text=Oi,%20estou%20entrando%20em%20contato%20através%20do%20site,%20gostaria%20de%20mais%20informações." 
                             target="_blank"
                             title="Clique para falar conosco no WhatsApp" 
                             rel="noopener noreferrer">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
+
                         </div>
+
                     </div>
+
+                    <!-- Formulário -->
                     <div class="Form-contato">
                         <h3>Formulário de Contato</h3> 
                         <form id="form-contato">
@@ -170,12 +203,15 @@
                             <button type="submit" class="btn">Enviar</button>
                         </form>
                     </div>
+
                 </div>
             </section>
         </main> 
     </body>
 
-    <!--footer-->
+    <!-- ==============================
+         FOOTER
+    ============================== -->
     <footer class="footer">
     <div class="footer-grid">
         
@@ -219,6 +255,10 @@
         <p>&copy; 2025 Delicinhas da Chica. Todos os direitos reservados. | Desenvolvido por Astrya Tech ✨</p>
     </div>
     </footer>
-    <!--importa o js-->
+
+    <!-- ==============================
+         SCRIPT
+    ============================== -->
     <script src="js/script.js"></script>
+
 </html>
