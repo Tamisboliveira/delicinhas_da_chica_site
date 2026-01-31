@@ -1,174 +1,249 @@
-// Aguarda o carregamento completo do DOM
+/**
+ * ==============================
+ * Cardápio Dinâmico – Delicinhas da Chica
+ * ==============================
+ * Responsável por:
+ * - Carregar produtos a partir de um arquivo JSON
+ * - Filtrar itens por categoria
+ * - Renderizar cards interativos
+ * - Controlar expansão de conteúdo e botão "Ver mais"
+ * - Gerenciar navegação mobile (menu hamburguer)
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
-    // URL do arquivo JSON.
-    const url = 'data/products.json';
-    
-    // Seleciona as divs e botões do HTML.
+
+    /* ==============================
+     * CONFIGURAÇÕES GERAIS
+     * ============================== */
+    const DATA_URL = 'data/products.json';
+    const INITIAL_PRODUCTS_LIMIT = 8;
+    const TEXT_LIMIT = 120;
+
+    /* ==============================
+    * ELEMENTOS DO DOM
+    * Referências aos elementos da interface
+    * ============================== */
+
     const cardsContainer = document.querySelector('.cards');
     const btnLoadMore = document.getElementById('btn-load-more');
     const filterButtons = document.querySelectorAll('.btn-filter');
+    const categoryDescriptionDiv = document.getElementById('category-description');
+    const generalIntroDiv = document.getElementById('general-intro');
+    
+    const menuBtn = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const menuOverlay = document.querySelector('.menu-overlay');
 
-    // Variáveis para controlar os produtos e a exibição.
+    /* ==============================
+    * ESTADO DA APLICAÇÃO
+    * Variáveis que controlam o comportamento da interface
+    * ============================== */
     let allProducts = [];
-    let productsToShow = 8; // Quantidade de produtos para mostrar inicialmente.
+    let productsToShow = INITIAL_PRODUCTS_LIMIT;
 
-    // Função para renderizar os cards na tela.
+    /* ==============================
+     * FUNÇÕES UTILITÁRIAS
+     * ============================== */
+
+    // Gera uma versão resumida do texto para exibição nos cards
+    const getShortText = (text, limit = TEXT_LIMIT) => {
+        if (!text) return '';
+        return text.length <= limit
+            ? text
+            : text.substring(0, limit).trim() + '...';
+    };
+
+    // Normaliza strings para facilitar comparação de categorias
+    const normalize = (text) =>
+        text.toLowerCase().trim().replace(/\s+/g, '-');
+
+    /* ==============================
+    * TAGS / BADGES
+    * Configuração visual das tags exibidas nos cards
+    * ============================== */
+    const tagConfig = {
+        classico: { label: "🍫 Clássico", class: "badge-classico" },
+        fruta: { label: "🍓 Fruta", class: "badge-fruta" },
+        especiais: { label: "✨ Especial", class: "badge-especial" },
+        premium: { label: "👑 Premium", class: "badge-premium" },
+        presente: { label: "🎁 Presente", class: "badge-presente" },
+        diversos: { label: "🍬 Diversos", class: "badge-diversos" }
+    };
+
+    const renderTags = (tags = []) =>
+        tags.map(tag => {
+            const key = tag.toLowerCase();
+            const config = tagConfig[key];
+
+            return config
+                ? `<span class="badge ${config.class}">${config.label}</span>`
+                : `<span class="badge">${tag}</span>`;
+        }).join('');
+
+    /* ==============================
+    * RENDERIZAÇÃO DOS CARDS
+    * Cria dinamicamente os cards de produto no DOM
+    * ============================== */
     const renderCards = (products) => {
-        cardsContainer.innerHTML = ''; // Limpa os cards existentes.
+        cardsContainer.innerHTML = '';
+
         products.forEach(product => {
             const card = document.createElement('div');
-            card.classList.add('card');
-            
-            // Adiciona a classe de tipo para o filtro.
-            card.classList.add(product.type.toLowerCase().replace(' ', '-'));
-            
-            // Monta o conteúdo HTML do card.
+            card.classList.add('card', normalize(product.type));
+
             card.innerHTML = `
                 <div class="card-top">
-                    <img src="${product.image}" alt="${product.name}" class="card-img">    
-                    <span class="tag">${product.type}</span>
+                    <img src="${product.image}" alt="${product.name}" class="card-img">
+                    <span class="badges">
+                        ${renderTags(Array.isArray(product.tags) ? product.tags : [product.tags])}
+                    </span>
                 </div>
+
                 <div class="card-content">
                     <h4 class="card-title">${product.name}</h4>
-                    <p class="card-description">${product.description}</p>
-                    <!-- <div class="card-footer">
-                        <span class="card-price">R$ ${product.price.toFixed(2).replace('.', ',')}</span>
-                        <a href="https://wa.me/5519971695600?text=Olá, quero pedir o produto: ${product.name}!" <class="btn-card">Adicionar<>/a>
-                    </div> -->
+
+                    <p class="card-description short">
+                        ${getShortText(product.description)}
+                    </p>
+
+                    <p class="card-description full">
+                        ${product.description}
+                    </p>
                 </div>
             `;
+
+            // Expansão do card
+            card.addEventListener('click', () => {
+                document
+                    .querySelectorAll('.card.expanded')
+                    .forEach(c => c !== card && c.classList.remove('expanded'));
+
+                card.classList.toggle('expanded');
+            });
+
             cardsContainer.appendChild(card);
         });
     };
 
-    // Mapeamento das categorias com textos detalhados
+    /* ==============================
+     * DESCRIÇÕES DAS CATEGORIAS
+     * ============================== */
     const categoryDescriptions = {
-        'trufa': `
-            <p><strong>Trufas artesanais que vão te surpreender:</strong>
-            Nosso carro-chefe! São mais de 15 sabores que variam diariamente. Perfeitas para um mimo individual ou como um presente sofisticado em nossas caixas presenteáveis. Sempre temos sabores variados a pronta-entrega para saciar a sua vontade de chocolate imediatamente!</p>
+        trufa: `
+            <p><strong>Trufas artesanais:</strong>
+            Mais de 15 sabores que variam diariamente. Perfeitas para um mimo ou presente especial.</p>
         `,
-        'especial': `
-            <p><strong>O Presente perfeito para encantar!</strong>
-            Surpreender alguém especial ficou ainda mais delicioso!<br><br>
-            Nossas trufas têm aquele sabor inconfundível de afeto e conforto, de doce feito em casa. Com as Delicinhas da Chica, você monta a caixa perfeita, a escolha é sua: personalize a seleção de trufas que mais combina com a pessoa especial (ou com o seu desejo do dia), e transforme qualquer ocasião em um momento doce, inesquecível e totalmente pensado com o carinho que só um presente artesanal pode oferecer.</p>
+        especial: `
+            <p><strong>Presentes que encantam:</strong>
+            Caixas personalizadas com carinho e sabor artesanal.</p>
         `,
-        'brigadeiro': `
-            <p><strong>Docinhos gourmet para festa:</strong> Para festas inesquecíveis, o segredo está no detalhe! Escolha entre 8 opções de sabores especiais de docinhos, todos feitos sob encomenda (a partir de 25 unidades) para assegurar que cada mordida tenha o máximo de sabor e qualidade gourmet.<br><br>
-            <strong>Informações Importantes:</strong><br><br>
-            <ul>
-                <li>Nossos docinhos têm aproximadamente 21g e são produzidos artesanalmente, utilizando chocolates nobres e ingredientes premium. Cada mordida é uma experiência inesquecível!</li>
-                <li>A durabilidade dos brigadeiros é de até 3 dias fora da geladeira e até 5 dias refrigerados. Porém, recomendamos consumir o quanto antes para melhor sabor e textura.</li>
-                <li>Sempre que possível, mantenha os docinhos em temperatura ambiente, em um local fresco e protegido da luz solar. A refrigeração pode alterar a textura e a aparência.</li>
-                <li>Para encomendas, você pode escolher 1 sabor a cada 25 unidades. Portanto, em um cento é possível selecionar até 4 sabores.</li>
-                <li>Docinhos personalizados com forminhas coloridas e/ou marcações com carimbos possuem taxa adicional de 10% sobre o valor total.</li>
-                <li>Não trabalhamos com brigadeiros coloridos, pois preservamos a originalidade artesanal e a qualidade dos nossos doces.</li>
-                <li>Por gentileza, realize sua encomenda com mínimo de 5 dias de antecedência.</li>
-                <li>Seu pedido será confirmado mediante o pagamento de 50% do valor total.</li>
-                <li>Em caso de cancelamento, o valor do sinal (50%) não é reembolsável, pois garante a reserva da produção e a compra dos ingredientes para a sua data.</li>
-                <li>Para caixas corporativas presenteáveis (2, 4, 6 ou 12 unidades), o pedido mínimo é de 10 caixas. Por gentileza, entre em contato para mais informações.</li>
-            </ul></p>
+        brigadeiro: `
+            <p><strong>Docinhos gourmet:</strong>
+            Produção sob encomenda para festas inesquecíveis.</p>
         `,
-        'colher': `
-            <p><strong>Brigadeiro no pote - Felicidade para comer de colher!</strong> Os docinhos clássicos mais amados do Brasil, agora em uma versão individual, cremosa, generosa e impossível de resistir!<br><br>
-            Feitos com chocolates premium e ingredientes de alta qualidade, nossos brigadeiros no pote derretem na boca e trazem aquele sabor de festa que abraça por dentro.<br><br>
-            Perfeitos para adoçar o seu dia, levar para onde você for ou presentear e mimar alguém especial. É a dose ideal de felicidade em um pote!</p> 
+        colher: `
+            <p><strong>Brigadeiro no pote:</strong>
+            Cremoso, intenso e impossível de resistir.</p>
         `,
-        'bolo': `
-            <p><strong>Bolos caseirinhos:</strong> A pedida perfeita para qualquer momento! Nossos bolos são feitos de forma artesanal, em seis opções de sabores. Simplesmente deliciosos e feitos com aquele toque caseiro que a gente ama!</p>`
-        ,
-        'pote': `
-            <p><strong>Bolos no pote:</strong> Um potinho recheado de sabor e cremosidade, perfeito para levar para onde você for, ou para presentear e mimar alguém especial!<br><br>
-            Nossos bolos no pote estão disponíveis em três sabores clássicos e irresistíveis, preparados com todo cuidado para entregar aquela combinação única de bolo macio com brigadeiro cremoso.<br><br>
-            É impossível escolher um só, cada colherada é uma dose perfeita de felicidade para a sua sobremesa, lanche ou para surpreender quem você ama!</p>
+        bolo: `
+            <p><strong>Bolos caseiros:</strong>
+            Simples, artesanais e cheios de afeto.</p>
+        `,
+        pote: `
+            <p><strong>Bolos no pote:</strong>
+            Praticidade e sabor em cada colherada.</p>
         `
     };
 
-    // Função para carregar os produtos do JSON.
+    /* ==============================
+    * FILTRO DE PRODUTOS
+    * Aplica filtros por categoria e controla exibição dos cards
+    * ============================== */
+    const filterMenu = (category) => {
+
+        categoryDescriptionDiv.innerHTML =
+            categoryDescriptions[category] || '';
+
+        generalIntroDiv.style.display =
+            category === 'todos' ? 'block' : 'none';
+
+        const filtered = allProducts.filter(product => {
+            const matchesCategory =
+                category === 'todos' ||
+                normalize(product.type) === category;
+
+            return matchesCategory && product.in_stock === true;
+        });
+
+        renderCards(filtered.slice(0, productsToShow));
+
+        btnLoadMore.style.display =
+            category === 'todos' && filtered.length > productsToShow
+                ? 'block'
+                : 'none';
+    };
+
+    /* ==============================
+     * CARREGAMENTO DOS DADOS
+     * ============================== */
     const loadProducts = async () => {
         try {
-            // Faz a requisição para o arquivo JSON.
-            const response = await fetch(url);
+            const response = await fetch(DATA_URL);
             allProducts = await response.json();
-            
-            // 1. ATIVA O BOTÃO 'TODOS' VISUALMENTE e ajusta o texto
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            document.querySelector(`.btn-filter[onclick="filterMenu('todos')"]`).classList.add('active');
-            
-            // 2. Garante que o texto 'Todos' e a introdução geral apareçam na carga
-            // Você precisará replicar aqui a lógica do texto para 'todos' ou chamar uma função separada.
-            categoryDescriptionDiv.innerHTML = categoryDescriptions['todos'] || '';
-            generalIntroDiv.style.display = 'block';
-            
-            // 3. RENDERIZA APENAS OS PRIMEIROS 8 CARDS (PARA O "VER MAIS" FUNCIONAR)
-            const initialProducts = allProducts.slice(0, productsToShow);
-            renderCards(initialProducts);
 
-            // 4. MOSTRA/ESCONDE O BOTÃO "VER MAIS"
-            if (allProducts.length > productsToShow) {
-                btnLoadMore.style.display = 'block';
-            } else {
-                btnLoadMore.style.display = 'none';
-            }
+            generalIntroDiv.style.display = 'block';
+            productsToShow = INITIAL_PRODUCTS_LIMIT;
+
+            filterMenu('todos');
 
         } catch (error) {
-            console.error('Erro ao carregar os produtos:', error);
-            cardsContainer.innerHTML = '<p>Erro ao carregar o cardápio. Por favor, tente novamente mais tarde.</p>';
+            console.error(error);
+            cardsContainer.innerHTML =
+                '<p>Erro ao carregar o cardápio.</p>';
         }
     };
 
-    // Seleciona a div para a descrição da categoria
-    const categoryDescriptionDiv = document.getElementById('category-description');
-    const generalIntroDiv = document.getElementById('general-intro'); // Para esconder/mostrar
+    /* ==============================
+     * EVENTOS DE INTERAÇÃO
+     * ============================== */
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-    // Função para filtrar os produtos.
-    const filterMenu = (category) => {
-        // Remove a classe 'active' de todos os botões e adiciona ao clicado.
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        document.querySelector(`.btn-filter[onclick="filterMenu('${category}')"]`).classList.add('active');
-
-        // Atualiza o texto de descrição da categoria
-        const descriptionHTML = categoryDescriptions[category];
-        categoryDescriptionDiv.innerHTML = descriptionHTML || ''; // Atualiza o texto
-
-        // OCULTA/MOSTRA A INTRO GERAL
-        if (category === 'todos') {
-            generalIntroDiv.style.display = 'block';
-        } else {
-            generalIntroDiv.style.display = 'none'; 
-        }
-
-        // Filtra os produtos com base na categoria.
-        const filteredProducts = allProducts.filter(product => {
-            return category === 'todos' || product.type.toLowerCase().replace(' ', '-') === category.toLowerCase();
+            productsToShow = INITIAL_PRODUCTS_LIMIT;
+            filterMenu(btn.dataset.category);
         });
+    });
 
-        renderCards(filteredProducts);
-        // Se for 'todos', deixamos a lógica de mostrar/esconder para o loadProducts inicial.
-        if (category !== 'todos' || allProducts.length <= productsToShow) {
-             btnLoadMore.style.display = 'none';
-        }
-    };
+    btnLoadMore?.addEventListener('click', () => {
+        productsToShow += INITIAL_PRODUCTS_LIMIT;
+        filterMenu('todos');
+    });
 
-    // Adiciona o evento de clique no botão "Ver Mais".
-    if (btnLoadMore) {
-        btnLoadMore.addEventListener('click', () => {
-            // Aumenta o número de produtos a serem exibidos.
-            productsToShow += 8;
-            
-            // Exibe mais produtos.
-            const newProducts = allProducts.slice(0, productsToShow);
-            renderCards(newProducts);
-
-            // Esconde o botão se não houver mais produtos para mostrar.
-            if (productsToShow >= allProducts.length) {
-                btnLoadMore.style.display = 'none';
-            }
-        });
-    }
-
-    // Adiciona a função `filterMenu` ao escopo global para que o `onclick` do HTML funcione.
-    window.filterMenu = filterMenu;
-
-    // Carrega os produtos ao iniciar a página.
+    /* ==============================
+     * INICIALIZAÇÃO
+     * ============================== */
     loadProducts();
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        menuOverlay.classList.toggle('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuOverlay.classList.remove('active');
+        menuBtn.classList.remove('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            menuOverlay.classList.remove('active');
+            menuBtn.classList.remove('open');
+        });
+    });
+
 });
