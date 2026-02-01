@@ -197,11 +197,20 @@
                     <div class="Form-contato">
                         <h3>Formulário de Contato</h3> 
                         <form id="form-contato">
-                            <input type="text" placeholder="Seu nome" required>
-                            <input type="email" placeholder="Seu e-mail" required>
-                            <textarea placeholder="Sua mensagem" rows="4" required></textarea>
-                            <button type="submit" class="btn">Enviar</button>
+                            <input type="text" name="nome" placeholder="Seu nome" required>
+                            <input type="email" name="email" placeholder="Seu e-mail" required>
+                            <textarea name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
+                            <button type="submit" class="btn">Enviar via WhatsApp</button>
+                            <small style="display:block; margin-top:8px; color:#666;">
+                                Ao enviar, você será direcionado para o WhatsApp.
+                            </small>
+
                         </form>
+
+                        <p id="msg-sucesso" style="display:none; color: green; margin-top: 10px;">
+                            ✅ Mensagem enviada com sucesso!
+                        </p>
+
                     </div>
 
                 </div>

@@ -7,7 +7,6 @@ Este é o site oficial da **Delicinhas da Chica**, uma confeitaria artesanal esp
 
 O projeto foi construído do zero, utilizando as tecnologias front-end padrão, com foco total em usabilidade (UX) e design responsivo.
 
----
 
 ## ✨ Tecnologias Utilizadas
 
@@ -19,7 +18,6 @@ O projeto foi construído do zero, utilizando as tecnologias front-end padrão, 
 | **JSON** | Armazenamento e gerenciamento dos dados do cardápio. |
 | **Font Awesome** | Biblioteca de ícones (redes sociais, menu, etc.). |
 
----
 
 ## 🎨 Design e Paleta de Cores
 
@@ -31,7 +29,6 @@ A paleta de cores é inspirada nos tons de chocolate e morango, refletindo a do�
 | **`--cor-secundaria`** | `#3c2115` | Marrom Escuro (Texto Principal) |
 | **`--cor-fundo`** | `#fed7da` | Rosa Claro (Fundo Principal) |
 
----
 
 ## 🛠️ Principais Funcionalidades
 
@@ -42,7 +39,23 @@ A paleta de cores é inspirada nos tons de chocolate e morango, refletindo a do�
 * **Chamadas para Ação Diretas:** Links de pedido direto para o WhatsApp em cada card de produto e na seção de Contato.
 * **Arquitetura CSS Modular:** Estilos organizados por seções (`about.css`, `menu.css`, `contact.css`) com um arquivo global (`style.css`) para cores, tipografia e componentes reutilizáveis.
 
----
+
+## 📩 Formulário de Contato (WhatsApp)
+
+Por se tratar de um site estático hospedado no **GitHub Pages**, o projeto não utiliza backend para envio de formulários.
+
+O formulário de contato funciona através de **JavaScript**, realizando:
+* Captura dos dados preenchidos pelo usuário
+* Redirecionamento automático para o WhatsApp com a mensagem formatada
+* Exibição de feedback visual de envio bem-sucedido na interface
+
+Essa abordagem garante:
+* Custo zero de hospedagem
+* Simplicidade de manutenção
+* Experiência direta e intuitiva para o cliente
+
+> 💬 O envio final da mensagem depende da confirmação do usuário no WhatsApp.
+
 
 ## 🚀 Como Visualizar o Projeto
 
@@ -59,7 +72,6 @@ Para ver o site localmente, siga estes passos:
 3.  **Abra o arquivo:**
     Abra o arquivo `index.html` diretamente no seu navegador.
 
-***
 
 ## ⚙️ Estrutura de Arquivos
 ```

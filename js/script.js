@@ -246,4 +246,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    document.getElementById("form-contato").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nome = this.nome.value;
+    const email = this.email.value;
+    const mensagem = this.mensagem.value;
+
+    const telefone = "5519971695600";
+
+    const texto = `Olá! :)%0A
+    Meu nome é ${nome}.%0A
+    E-mail: ${email}%0A
+    Mensagem:%0A${mensagem}`;
+
+        const url = `https://wa.me/${telefone}?text=${texto}`;
+
+        window.open(url, "_blank");
+
+        // Mensagem de sucesso
+        document.getElementById("msg-sucesso").style.display = "block";
+
+        // Limpa o formulário
+        this.reset();
+    });
+
+
 });
